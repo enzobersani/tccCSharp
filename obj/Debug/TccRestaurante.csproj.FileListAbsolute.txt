@@ -1,0 +1,485 @@
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\TccRestaurante.exe.config
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Google.Protobuf.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\MySql.Data.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Buffers.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Memory.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ZstdNet.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\EnvDTE.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\stdole.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Google.Protobuf.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\Google.Protobuf.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\MySql.Data.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Buffers.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Memory.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.FrmRelProdutos.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.Caixa.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.ListaFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.ListaProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaGerarRelatorioVenda.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.TelaMenu.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.Properties.Resources.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.csproj.CopyComplete
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\obj\Debug\TccRestaurante.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TCC\TCCrestaurante\TccRestaurante\bin\Debug\TccRestaurante.pdb
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\TccRestaurante.exe.config
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\TccRestaurante.exe
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\TccRestaurante.pdb
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Google.Protobuf.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\MySql.Data.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Buffers.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Memory.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ZstdNet.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\EnvDTE.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\stdole.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Google.Protobuf.pdb
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\Google.Protobuf.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\MySql.Data.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Buffers.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Memory.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.FrmRelProdutos.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFornecedor.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.Caixa.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.ListaFuncionario.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.ListaProduto.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaGerarRelatorioVenda.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.TelaMenu.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.Properties.Resources.resources
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.csproj.CopyComplete
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.exe
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.pdb
+C:\Users\Enzo Bersani\Desktop\TCCRestaurante-master\TccRestaurante\obj\Debug\TccRestaurante.ListaFornecedor.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.exe.config
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\MySql.Data.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Buffers.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Memory.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ZstdNet.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\EnvDTE.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\stdole.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\MySql.Data.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Buffers.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Memory.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.FrmRelProdutos.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaFornecedor.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFornecedor.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.Caixa.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaGerarRelatorioVenda.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaMenu.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.Properties.Resources.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.CopyComplete
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.exe.config
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\TccRestaurante.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\MySql.Data.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Buffers.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Memory.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ZstdNet.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\EnvDTE.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\stdole.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.pdb
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\Google.Protobuf.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\MySql.Data.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Buffers.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Memory.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.FrmRelProdutos.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaFornecedor.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFornecedor.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.Caixa.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.ListaProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaGerarRelatorioVenda.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.TelaMenu.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.Properties.Resources.resources
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.csproj.CopyComplete
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.exe
+C:\Users\gusto\OneDrive\Área de Trabalho\Office e Windows\Apps\Faculdade\TccNew\TccRestaurante\obj\Debug\TccRestaurante.pdb
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\TccRestaurante.exe.config
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\TccRestaurante.exe
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\TccRestaurante.pdb
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Google.Protobuf.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\MySql.Data.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Buffers.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Memory.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ZstdNet.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\EnvDTE.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Google.Protobuf.pdb
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\Google.Protobuf.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\MySql.Data.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Buffers.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Memory.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastrodeDesconto.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.FrmRelProdutos.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.ListaFornecedor.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFornecedor.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.Caixa.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.ListaFuncionario.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.ListaProduto.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaGerarRelatorioVenda.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaLoginNova.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaMenu.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.Properties.Resources.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.TelaMesas.resources
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.csproj.CopyComplete
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.exe
+C:\Users\Enzo\Desktop\TccRestaurante\obj\Debug\TccRestaurante.pdb
