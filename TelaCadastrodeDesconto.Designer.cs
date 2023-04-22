@@ -38,6 +38,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +98,7 @@
             this.txtCodigoDesc.Name = "txtCodigoDesc";
             this.txtCodigoDesc.Size = new System.Drawing.Size(99, 22);
             this.txtCodigoDesc.TabIndex = 1;
+            this.txtCodigoDesc.Leave += new System.EventHandler(this.txtCodigoDesc_Leave);
             // 
             // label1
             // 
@@ -110,7 +112,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(393, 126);
+            this.btnSalvar.Location = new System.Drawing.Point(389, 166);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(93, 33);
             this.btnSalvar.TabIndex = 1;
@@ -120,27 +122,40 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(8, 126);
+            this.btnExcluir.Location = new System.Drawing.Point(8, 166);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(93, 33);
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(107, 126);
+            this.btnLimpar.Location = new System.Drawing.Point(106, 166);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(93, 33);
             this.btnLimpar.TabIndex = 3;
             this.btnLimpar.Text = "Limpar tela";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(387, 126);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 33);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Atualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TelaCadastrodeDesconto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 165);
+            this.ClientSize = new System.Drawing.Size(494, 211);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -168,5 +183,6 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button button1;
     }
 }

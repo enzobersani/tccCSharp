@@ -54,23 +54,18 @@ namespace TccRestaurante {
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtCodigoFuncionario.Text == "" || txtProduto1.Text == "" || txtValor1.Text == "" || txtQt1.Text == "")
+            if (txtCodigoFuncionario.Text == "" || txtProduto1.Text == "" ||
+                txtValor1.Text == "" || txtQt1.Text == "" || txtQtTotal.Text == "")
             {
                 MessageBox.Show("Existem campos obrigatórios sem conteúdo!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
-                strSql = "insert into venda (idFuncionario, idProduto1, Produto1, idProduto2, Produto2," +
-                    "idProduto3, Produto3, idProduto4, Produto4, idProduto5, Produto5, idProduto6, Produto6," +
-                    "valor1, valor2, valor3, valor4, valor5, valor6, valorTotal, Qt1, Qt2, Qt3, Qt4, Qt5, Qt6, nomeFuncionario) " +
-                    "values ('" + txtCodigoFuncionario.Text + "', '" + txtProduto1.Text + "', '" + txtDesc1.Text + "'," +
-                    " '" + txtProduto2.Text + "','" + txtDesc2.Text + "', '" +txtProduto3.Text+ "', '" +txtDesc3.Text+"'" +
-                    ", '" +txtProduto4.Text+ "', '" +txtDesc4.Text+ "', '" +txtProduto5.Text+ "', '" +txtDesc5.Text+"'" +
-                    ", '" +txtProduto6.Text+ "', '" +txtDesc6.Text+ "', '" +txtValor1.Text+ "', '" +txtValor2.Text+ "'" +
-                    ", '" +txtValor2.Text+ "', '" +txtValor3.Text+ "', '" +txtValor4.Text+ "', '" +txtValor5.Text+ "', '" +txtValor6.Text+ "'" +
-                    ", '" +txtQtTotal.Text+ "', '" +txtQt1.Text+ "', '" +txtQt2.Text+ "', '" +txtQt3.Text+ "', '" +txtQt5.Text+ "', '" +txtQt6.Text+ "'" +
-                    ", '" +txtDescricaoFuncionario.Text+ "')";
+                strSql = "insert into venda (CD_PRODUTO, CD_FUNCIONARIO, NR_VALOR, NR_VALORTOTAL, CD_DESCONTO) " +
+                    "values ('" + txtProduto1.Text + "', '" + txtCodigoFuncionario.Text + "', '" + txtValor1.Text + "'," +
+                    " '" + txtQtTotal.Text + "','" + txtCodDesc.Text + "')";
+               
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
 
@@ -79,17 +74,23 @@ namespace TccRestaurante {
                     sqlCon.Open();
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Venda realizada com sucesso!");
+                    button3_Click_1();
                 }
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Código de produto ja existente!");
+                    MessageBox.Show(ex.Message);
                 }
                 finally
                 {
                     sqlCon.Close();
                 }
             }
+        }
+
+        private void button3_Click_1()
+        {
+            throw new NotImplementedException();
         }
 
         private void txtProduto1_Leave(object sender, EventArgs e)
