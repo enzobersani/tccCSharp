@@ -130,6 +130,12 @@
     <Compile Include="TelaCadastroFornecedor.Designer.cs">
       <DependentUpon>TelaCadastroFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaCadastroPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroPagamento.Designer.cs">
+      <DependentUpon>TelaCadastroPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,11 +166,11 @@
     <Compile Include="TelaCadastroProduto.Designer.cs">
       <DependentUpon>TelaCadastroProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaGerarRelatorioVenda.cs">
+    <Compile Include="TelaCaixaNova.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaGerarRelatorioVenda.Designer.cs">
-      <DependentUpon>TelaGerarRelatorioVenda.cs</DependentUpon>
+    <Compile Include="TelaCaixaNova.Designer.cs">
+      <DependentUpon>TelaCaixaNova.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
@@ -172,17 +178,11 @@
     <Compile Include="TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaLoginNova.cs">
+    <Compile Include="TelaMenuNovo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaLoginNova.Designer.cs">
-      <DependentUpon>TelaLoginNova.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TelaMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaMenu.Designer.cs">
-      <DependentUpon>TelaMenu.cs</DependentUpon>
+    <Compile Include="TelaMenuNovo.Designer.cs">
+      <DependentUpon>TelaMenuNovo.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaCadastroUsuario.cs">
       <SubType>Form</SubType>
@@ -211,6 +211,9 @@
     <EmbeddedResource Include="TelaCadastroFornecedor.resx">
       <DependentUpon>TelaCadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastroPagamento.resx">
+      <DependentUpon>TelaCadastroPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaCaixa.resx">
       <DependentUpon>TelaCaixa.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,17 +232,14 @@
     <EmbeddedResource Include="TelaCadastroUsuario.resx">
       <DependentUpon>TelaCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaGerarRelatorioVenda.resx">
-      <DependentUpon>TelaGerarRelatorioVenda.cs</DependentUpon>
+    <EmbeddedResource Include="TelaCaixaNova.resx">
+      <DependentUpon>TelaCaixaNova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaLoginNova.resx">
-      <DependentUpon>TelaLoginNova.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TelaMenu.resx">
-      <DependentUpon>TelaMenu.cs</DependentUpon>
+    <EmbeddedResource Include="TelaMenuNovo.resx">
+      <DependentUpon>TelaMenuNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -47,6 +47,7 @@
             this.C3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -264,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn C4;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
     }
 }

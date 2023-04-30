@@ -41,7 +41,7 @@ namespace TccRestaurante
             MySqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read() == true)
             {
-                new TelaLoginNova().Show();
+                new TelaMenuNovo().Show();
                 this.Hide();
             }
 

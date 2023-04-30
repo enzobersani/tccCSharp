@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TccRestaurante
 {
-    public partial class TelaLoginNova : Form
+    public partial class TelaMenuNovo : Form
     {
-        public TelaLoginNova()
+        public TelaMenuNovo()
         {
             InitializeComponent();
         }
@@ -58,7 +58,7 @@ namespace TccRestaurante
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Caixa caixa = new Caixa();
+            TelaCaixaNova caixa = new TelaCaixaNova();
             caixa.ShowDialog();
         }
 
@@ -90,6 +90,12 @@ namespace TccRestaurante
         {
             TelaCadastrodeDesconto telaCadastrodeDesconto = new TelaCadastrodeDesconto();
             telaCadastrodeDesconto.ShowDialog();
+        }
+
+        private void btnPagamento_Click(object sender, EventArgs e)
+        {
+            TelaCadastroPagamento pagamento = new TelaCadastroPagamento();
+            pagamento.ShowDialog();
         }
     }
 }
