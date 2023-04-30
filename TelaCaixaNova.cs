@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,8 +99,9 @@ namespace TccRestaurante
                             }
                         }
 
+                        Math.Round(Total, 2);
                         // Exiba o valor total em algum lugar (por exemplo, em uma label)
-                        txtValorTotal.Text = Total.ToString();
+                        txtValorTotal.Text = Total.ToString("F");
                     }
                 }
                 catch (Exception ex)
@@ -114,49 +116,6 @@ namespace TccRestaurante
                 txtCodProduto.Text = "";
                 txtQuantidade.Text = "";
                 txtCodProduto.Focus();
-            }
-        }
-
-        private void txtCodDesconto_Leave(object sender, EventArgs e)
-        {
-            if (txtCodDesconto.Text != "")
-            {
-                try
-                {
-                    string codigoDesc = txtCodDesconto.Text;
-
-                    Conexao = new MySqlConnection(strCon);
-
-                    string sql = "SELECT * " +
-                                "FROM desconto " +
-                                "WHERE CD_DESCONTO=" + codigoDesc;
-
-                    Conexao.Open();
-
-                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-                    MySqlDataReader reader = comando.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        ValorDesc = reader.GetDecimal(2);
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Desconto não encontrado!");
-                }
-                finally
-                {
-                    Conexao.Close();
-                }
-
-                Total = Total - ValorDesc;
-
-                txtValorTotal.Text = Total.ToString();
-
-                txtCodDesconto.Text = "";
             }
         }
 
@@ -193,6 +152,53 @@ namespace TccRestaurante
                 Conexao.Close();
             }
 
+        }
+
+        private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == 13)
+            {
+                if (txtCodDesconto.Text != "")
+                {
+                    try
+                    {
+                        string codigoDesc = txtCodDesconto.Text;
+
+                        Conexao = new MySqlConnection(strCon);
+
+                        string sql = "SELECT * " +
+                                    "FROM desconto " +
+                                    "WHERE CD_DESCONTO=" + codigoDesc;
+
+                        Conexao.Open();
+
+                        MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                        MySqlDataReader reader = comando.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            ValorDesc = reader.GetDecimal(2);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Desconto não encontrado!");
+                    }
+                    finally
+                    {
+                        Conexao.Close();
+                    }
+
+                    Total = Total - ValorDesc;
+
+                    txtValorTotal.Text = Total.ToString("F");
+
+                    txtCodDesconto.Text = "";
+                }
+            }     
         }
     }
 }
