@@ -664,13 +664,16 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastrodeDesconto.
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.FrmRelProdutos.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaFornecedor.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroFornecedor.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroPagamento.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.Caixa.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaFuncionario.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaProduto.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroFuncionario.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroProduto.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroUsuario.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCaixaNova.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaLogin.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMenuNovo.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.Properties.Resources.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMesas.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
@@ -678,6 +681,3 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.CoreCompileInput
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.CopyComplete
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.exe
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.pdb
-C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCaixaNova.resources
-C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMenuNovo.resources
-C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroPagamento.resources

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -42,6 +43,29 @@ namespace TccRestaurante
 
             if (e.KeyChar == 13)
             {
+                if (txtCodProduto.Text != "")
+                {
+                    string strSql = "insert into itensvenda(CD_PRODUTO, CD_VENDA) " +
+                    "values('" + txtCodProduto.Text + "', '" + txtCodVenda.Text + "')";
+                    Conexao = new MySqlConnection(strCon);
+                    MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+                    try
+                    {
+                        Conexao.Open();
+                        comando.ExecuteNonQuery();
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        Conexao.Close();
+                    }
+                }
+
                 Quantidade = Convert.ToDecimal(txtQuantidade.Text);
                 try
                 {
@@ -77,30 +101,20 @@ namespace TccRestaurante
 
                     int columnIndex = dataGridView1.Columns["valorUnit"].Index;
 
-                    // Obtenha o índice da última linha do DataGridView
                     int lastIndex = dataGridView1.Rows.Count - 1;
 
-                    // Verifique se o índice da última linha é válido
                     if (lastIndex >= 0)
                     {
-                        // Obtenha o valor da célula da coluna desejada na última linha
                         object lastValue = dataGridView1.Rows[lastIndex].Cells[columnIndex].Value;
 
                         foreach (DataGridViewRow row2 in dataGridView1.Rows)
                         {
-                            // Verifique se a célula não é nula e se o valor é um número válido
-                            //if (row2.Cells["valorUnit"].Value != null && decimal.TryParse(row2.Cells["valorUnit"].Value.ToString(), out decimal valor))
                             if (lastValue != null && decimal.TryParse(lastValue.ToString(), out decimal valor))
                             {
-                                //decimal quantidadeUnit = decimal.Parse(row2.Cells["quantidade"].Value.ToString());
-
                                 Total += valor * Quantidade;
                                 break;
                             }
                         }
-
-                        Math.Round(Total, 2);
-                        // Exiba o valor total em algum lugar (por exemplo, em uma label)
                         txtValorTotal.Text = Total.ToString("F");
                     }
                 }
@@ -121,37 +135,13 @@ namespace TccRestaurante
 
         private void TelaCaixaNova_Load(object sender, EventArgs e)
         {
-            try
-            {
-
-                Conexao = new MySqlConnection(strCon);
-
-                string sql = "SELECT CD_PAGAMENTO, NM_PAGAMENTO FROM pagamento ORDER BY CD_PAGAMENTO";
-
-                Conexao.Open();
-
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                txtPagamento.Items.Clear();
-                while (reader.Read())
-                {
-                    txtPagamento.Items.Add(reader.GetString(1));
-                    txtPagamento.DisplayMember = "NM_PAGAMENTO";
-                    txtPagamento.ValueMember = "CD_PAGAMENTO";
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Formas de pagamentos não encontradas!");
-            }
-            finally
-            {
-                Conexao.Close();
-            }
-
+            txtCodProduto.Enabled = false;
+            txtQuantidade.Enabled = false;
+            txtCodDesconto.Enabled = false;
+            txtPagamento.Enabled = false;
+            btnConfirmarVenda.Enabled = false;
+            btnCancelarVenda.Enabled = false;
+            txtPorPessoa.Enabled = false;
         }
 
         private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
@@ -199,6 +189,242 @@ namespace TccRestaurante
                     txtCodDesconto.Text = "";
                 }
             }     
+        }
+
+        private void txtPorPessoa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                Total = Total / Convert.ToDecimal(txtPorPessoa.Text);
+
+                txtValorPorPessoa.Text = Total.ToString("F");
+
+                txtPorPessoa.Text = "";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtCodProduto.Enabled = true;
+            txtQuantidade.Enabled = true;
+            txtCodDesconto.Enabled = true;
+            txtPorPessoa.Enabled = true;
+            txtPagamento.Enabled = true;
+            btnConfirmarVenda.Enabled = true;
+            btnCancelarVenda.Enabled = true;
+
+            btnNovaVenda.Enabled = false;
+            string strSql = "insert into vendas(CD_FUNCIONARIO) " +
+                "values('" + txtFuncionario.Text + "')";
+            Conexao = new MySqlConnection(strCon);
+            MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+            try
+            {
+                Conexao.Open();
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Venda iniciada!");
+                string strSelect = "SELECT MAX(CD_VENDA) FROM vendas";
+
+                MySqlCommand comando2 = new MySqlCommand(strSelect, Conexao);
+                MySqlDataReader reader = comando2.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtCodVenda.Text = reader.GetString(0);
+                }
+                txtCodProduto.Focus();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Funcionário não cadastrado!");
+                btnNovaVenda.Enabled = true;
+                TelaCaixaNova_Load(sender, e);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void txtPagamento_Enter(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexao = new MySqlConnection(strCon);
+
+                string sql = "SELECT CD_PAGAMENTO, NM_PAGAMENTO FROM pagamento ORDER BY CD_PAGAMENTO";
+
+                Conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                List<String> items = new List<String>();
+
+                txtPagamento.Items.Clear();
+                while (reader.Read())
+                {
+                    var reader2 = reader.GetString(1);
+                    items.Add(reader.GetString(0) + " - " + reader2);
+                }
+
+                Object[] itemobj = items.Cast<Object>().ToArray();
+                txtPagamento.Items.AddRange(itemobj);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Formas de pagamentos não encontradas!");
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void btnConfirmarVenda_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.Rows.Count != 0)
+            {
+                string strSql = "UPDATE vendas SET CD_PAGAMENTO='" + txtPagamento.Text + "', QT_VALORTOTAL='" + txtValorTotal.Text + "'" +
+                     " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
+                Conexao = new MySqlConnection(strCon);
+                MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+                try
+                {
+                    Conexao.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Venda realizada com sucesso!");
+                    txtCodProduto.Text = "";
+                    txtQuantidade.Text = "";
+                    txtCodDesconto.Text = "";
+                    txtPagamento.Text = "";
+                    txtPorPessoa.Text = "";
+                    txtCodVenda.Text = "";
+                    txtValorTotal.Text = "";
+                    btnNovaVenda.Enabled = true;
+                    dataGridView1.Rows.Clear();
+                    TelaCaixaNova_Load(sender, e);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Campos obrigatórios não preenchido!");
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
+
+                Total = 0;
+            }
+        }
+
+        private void btnCancelarVenda_Click(object sender, EventArgs e)
+        {
+            if (txtCodVenda.Text != "")
+            {
+                string strSql = "DELETE FROM vendas WHERE CD_VENDA = '" + txtCodVenda.Text + "'";
+                Conexao = new MySqlConnection(strCon);
+                MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+                try
+                {
+                    Conexao.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Venda " + txtCodVenda.Text + " cancelada!");
+                    txtCodVenda.Text = "";
+                    txtCodProduto.Text = "";
+                    txtQuantidade.Text = "";
+                    txtCodDesconto.Text = "";
+                    txtPagamento.Text = "";
+                    txtPorPessoa.Text = "";
+                    txtValorTotal.Text = "";
+                    btnNovaVenda.Enabled = true;
+                    dataGridView1.Rows.Clear();
+                    TelaCaixaNova_Load(sender, e);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
+                Total = 0;
+            }
+
+            if (dataGridView1.Rows.Count != 0)
+            {
+                string strSql = "DELETE FROM itensvenda WHERE CD_VENDA = '" + txtCodVenda.Text + "'";
+                Conexao = new MySqlConnection(strCon);
+                MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+                try
+                {
+                    Conexao.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Venda " + txtCodVenda.Text + " cancelada!");
+                    txtCodVenda.Text = "";
+                    txtCodProduto.Text = "";
+                    txtQuantidade.Text = "";
+                    txtCodDesconto.Text = "";
+                    txtPagamento.Text = "";
+                    txtPorPessoa.Text = "";
+                    txtValorTotal.Text = "";
+                    btnNovaVenda.Enabled = true;
+                    dataGridView1.Rows.Clear();
+                    TelaCaixaNova_Load(sender, e);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
+                Total = 0;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Verifica se há pelo menos uma linha selecionada
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Obtém a linha selecionada
+                DataGridViewRow linhaSelecionada = dataGridView1.SelectedRows[0];
+
+                // Obtém o ID do registro associado à linha selecionada
+                int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells["codigo"].Value);
+
+                // Remove o registro do banco de dados
+                string queryDelete = "DELETE FROM itensvenda WHERE CD_PRODUTO = @codigo";
+                using (MySqlCommand cmd = new MySqlCommand(queryDelete, Conexao))
+                {
+                    Conexao.Open();
+                    cmd.Parameters.AddWithValue("@codigo", idSelecionado);
+                    cmd.ExecuteNonQuery();
+                }
+
+                dataGridView1.Rows.Remove(linhaSelecionada);
+                MessageBox.Show("Produto excluído!");
+                dataGridView1.DataSource = null;
+                Conexao.Close();
+            }
+
         }
     }
 }
