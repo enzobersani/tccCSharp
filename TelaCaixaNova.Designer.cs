@@ -100,6 +100,7 @@
             this.txtFuncionario.Size = new System.Drawing.Size(194, 40);
             this.txtFuncionario.TabIndex = 1;
             this.txtFuncionario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFuncionario.DoubleClick += new System.EventHandler(this.txtFuncionario_DoubleClick);
             // 
             // label6
             // 
@@ -198,6 +199,7 @@
             this.txtCodProduto.TabIndex = 3;
             this.txtCodProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCodProduto.TextChanged += new System.EventHandler(this.txtCodProduto_TextChanged);
+            this.txtCodProduto.DoubleClick += new System.EventHandler(this.txtCodProduto_DoubleClick);
             // 
             // label1
             // 
@@ -216,7 +218,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeight = 35;

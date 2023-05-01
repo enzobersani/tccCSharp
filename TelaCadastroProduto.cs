@@ -187,6 +187,7 @@ namespace TccRestaurante
                     txtEstoque.Text = "";
                     txtCodigoFornecedor.Text = "";
                     txtFornecedor.Text = "";
+                    button1.Enabled = true;
                     txtCodigoProduto.Focus();
                 }
 

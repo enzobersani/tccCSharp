@@ -178,6 +178,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C1,
@@ -188,6 +191,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(91, 21);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(13, 3, 3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(750, 395);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -196,30 +200,35 @@
             // 
             this.C1.HeaderText = "Código";
             this.C1.Name = "C1";
+            this.C1.ReadOnly = true;
             this.C1.Width = 65;
             // 
             // C2
             // 
             this.C2.HeaderText = "Nome";
             this.C2.Name = "C2";
+            this.C2.ReadOnly = true;
             this.C2.Width = 200;
             // 
             // C3
             // 
             this.C3.HeaderText = "CPF";
             this.C3.Name = "C3";
+            this.C3.ReadOnly = true;
             this.C3.Width = 120;
             // 
             // Celular
             // 
             this.Celular.HeaderText = "Celular";
             this.Celular.Name = "Celular";
+            this.Celular.ReadOnly = true;
             this.Celular.Width = 120;
             // 
             // C4
             // 
             this.C4.HeaderText = "Email";
             this.C4.Name = "C4";
+            this.C4.ReadOnly = true;
             this.C4.Width = 200;
             // 
             // ListaFuncionario
