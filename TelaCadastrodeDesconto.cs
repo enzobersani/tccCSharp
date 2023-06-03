@@ -74,7 +74,7 @@ namespace TccRestaurante
                     sqlCon.Open();
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Desconto excluído com sucesso!");
-                    //btnSalvar.Enabled = true;
+                    btnSalvar.Enabled = true;
                     txtCodigoDesc.Text = "";
                     txtDescricaoDesc.Text = "";
                     txtReais.Text = "";
@@ -110,10 +110,11 @@ namespace TccRestaurante
 
                     if (reader.Read())
                     {
-                        //button1.Enabled = false;
+                        btnAtualizar.Enabled = true;
+                        btnSalvar.Enabled = false;
                         txtCodigoDesc.Text = reader.GetString(0);
                         txtDescricaoDesc.Text = reader.GetString(1);
-                        txtReais.Text = reader.GetString(2);
+                        txtReais.Text = reader.GetString(2);                   
                     }
 
                 }
@@ -126,6 +127,9 @@ namespace TccRestaurante
                 {
                     sqlCon.Close();
                 }
+                
+                if(txtCodigoDesc.Text == "")
+                    btnAtualizar.Enabled = false;
             }
         }
 
@@ -134,6 +138,8 @@ namespace TccRestaurante
             txtCodigoDesc.Text = string.Empty;
             txtDescricaoDesc.Text = string.Empty;
             txtReais.Text = string.Empty;
+            btnAtualizar.Enabled = false;
+            btnSalvar.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -170,6 +176,7 @@ namespace TccRestaurante
                     sqlCon.Close();
                 }
             }
+            btnAtualizar.Enabled = false;
         }
     }
 }

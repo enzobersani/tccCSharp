@@ -21,64 +21,142 @@ namespace TccRestaurante
             InitializeComponent();
         }
 
-            private void btCadastrar_Click(object sender, EventArgs e)
+        private void TelaMesas_Load(object sender, EventArgs e)
+        {
+            try
             {
+                sqlCon = new MySqlConnection(strCon);
 
-                if (txtNumeroMesa.Text == string.Empty)
-                    MessageBox.Show("Nenhum código de mesa foi informado!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string sql = "SELECT * FROM mesas";
 
-                string _numeroMesa = txtNumeroMesa.Text;
+                sqlCon.Open();
 
-                if (txtNumeroMesa.Text != string.Empty)
+                MySqlCommand comando = new MySqlCommand(sql, sqlCon);
+
+                MySqlDataReader reader = comando.ExecuteReader();
+                int mesa = 0;
+
+                if (reader.Read())
                 {
-                    //Button button = new Button();
-                    //button.Text = _numeroMesa;
-                    //button.Name = _numeroMesa;
-                    //button.BackColor = Color.FromArgb(0, 255, 0);
-                    //button.Size = new Size(180, 90);
+                    mesa = reader.GetInt32(0);
+                }
 
-                    //// Adicionar o botão ao TableLayoutPanel na célula (0, 0)
-                    //tableLayoutPanel1.Controls.Add(button, -1, -1);
+                for (int i = 1; i <= mesa; i++)
+                {
+                    Button button = new Button();
+                    button.Text = i.ToString();
+                    button.Name = i.ToString();
+                    button.BackColor = Color.FromArgb(0, 255, 0);
+                    button.Size = new Size(180, 90);
+                    string botao = button.Name;
 
-                    txtNumeroMesa.Focus();
-
-                    strSql = "insert into mesas (CD_MESA) " +
-                       "values ('" + txtNumeroMesa.Text + "')";
-                    sqlCon = new MySqlConnection(strCon);
-                    MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
-
-                    try
+                    button.Click += new EventHandler((a, b) =>
                     {
-                        Button button = new Button();
-                        button.Text = _numeroMesa;
-                        button.Name = _numeroMesa;
-                        button.BackColor = Color.FromArgb(0, 255, 0);
-                        button.Size = new Size(180, 90);
+                        chamarVenda(botao);
+                    });
 
-                        // Adicionar o botão ao TableLayoutPanel na célula (0, 0)
-                        tbMesa.Controls.Add(button, -1, -1);
+                    tbMesa.Controls.Add(button, -1, -1);
+                }
 
-                        sqlCon.Open();
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Mesa adicionada com sucesso!");
-                        txtNumeroMesa.Text = string.Empty;
-                        //this.Controls.Add(button); // adiciona o botão diretamente ao Form
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
 
-                        //Control[] controles = this.Controls.Find(_numeroMesa, true);
+        private void chamarVenda(string botao)
+        {
+            try
+            {
+                sqlCon = new MySqlConnection(strCon);
 
+                string sql = "SELECT * FROM mesascadastro WHERE CD_MESA='" + botao + "'";
+
+                sqlCon.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, sqlCon);
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                string condicaoMesa;
+
+                if (reader.Read())
+                {
+                    condicaoMesa = reader.GetString(2);
+
+                    if (condicaoMesa == null || condicaoMesa == "A")
+                    {
+                        string mensagem = $"Deseja iniciar uma nova venda na mesa {botao}";
+                        string caption = "Teste de retorno";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result;
+
+                        result = MessageBox.Show(mensagem, caption, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            inserirMesas(botao);
+                            TelaCaixaNova telaCaixaNova = new TelaCaixaNova() { Owner = this };
+                            telaCaixaNova.txtCodigoMesa.Text = botao;
+                            telaCaixaNova.ShowDialog();
+                        }
                     }
+                }
+                else
+                {
+                    string mensagem = $"Deseja iniciar uma nova venda na mesa {botao}";
+                    string caption = "Teste de retorno";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
 
-                    catch (Exception ex)
+                    result = MessageBox.Show(mensagem, caption, buttons);
+                    if (result == DialogResult.Yes)
                     {
-                        MessageBox.Show("erro");
-                    }
-                    finally
-                    {
-                        sqlCon.Close();
+                        inserirMesas(botao);
+                        TelaCaixaNova telaCaixaNova = new TelaCaixaNova() { Owner = this };
+                        telaCaixaNova.txtCodigoMesa.Text = botao;
+                        telaCaixaNova.ShowDialog();
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
+        private void inserirMesas(string botao)
+        {
+            try
+            {
+                DateTime dataAtual = DateTime.Now;
+                string dataFormatada = dataAtual.ToString("yyyy-MM-dd");
+                string strSql = "insert into mesascadastro(CD_MESA, DT_MESA, TP_SITUACAO) " +
+                    "values('" + botao + "', '" + dataFormatada + "', '" + 1 + "')";
+                sqlCon = new MySqlConnection(strCon);
+                MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
+                sqlCon.Open();
+                comando.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
         }
     }
+}
 
 

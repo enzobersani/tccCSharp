@@ -1643,7 +1643,7 @@ namespace DGVPrinterHelper //AllocationRequest
             printDoc = new PrintDocument();
             //printDoc.PrintPage += new PrintPageEventHandler(PrintPageEventHandler);
             //printDoc.BeginPrint += new PrintEventHandler(BeginPrintEventHandler);
-            PrintMargins = new Margins(60, 60, 40, 40);
+            PrintMargins = new Margins(40, 30, 40, 40);
 
             // set default fonts
             pagenofont = new Font("Tahoma", 8, FontStyle.Regular, GraphicsUnit.Point);

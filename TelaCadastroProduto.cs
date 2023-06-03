@@ -38,15 +38,16 @@ namespace TccRestaurante
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "")
+            if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "" || txtCodigoFornecedor.Text == "")
             {
                 MessageBox.Show("Existem campos obrigatórios sem conteúdo!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
-                strSql = "insert into produto (id, nomeProduto, descProduto, valorUnit, qtEstoque) " +
-                    "values ('" + txtCodigoProduto.Text + "', '" + txtProduto.Text + "', '" + txtDescProduto.Text + "', '" + txtValorUnit.Text + "','" + txtEstoque.Text + "')";
+                strSql = "insert into produto (id, nomeProduto, descProduto, valorUnit, qtEstoque, idFornecedor) " +
+                    "values ('" + txtCodigoProduto.Text + "', '" + txtProduto.Text + "', '" + txtDescProduto.Text + "'," +
+                    " '" + txtValorUnit.Text + "','" + txtEstoque.Text + "', '" + txtCodigoFornecedor.Text + "')";
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
 
@@ -146,6 +147,7 @@ namespace TccRestaurante
                         txtDescProduto.Text = reader.GetString(2);
                         txtValorUnit.Text = Convert.ToString(reader.GetDecimal(3));
                         txtEstoque.Text = Convert.ToString(reader.GetInt32(4));
+                        txtCodigoFornecedor.Text = Convert.ToString(reader.GetInt32(5));
                     }
 
                 }
@@ -158,12 +160,42 @@ namespace TccRestaurante
                 {
                     sqlCon.Close();
                 }
+
+                if (txtCodigoFornecedor.Text != "")
+                {
+                    strSql = "SELECT * FROM fornecedor WHERE idFornecedor='" + txtCodigoFornecedor.Text + "'";
+                    sqlCon = new MySqlConnection(strCon);
+
+                    try
+                    {
+                        sqlCon.Open();
+
+                        MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
+
+                        MySqlDataReader reader = comando.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            txtFornecedor.Text = reader.GetString(1);
+                        }
+
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        sqlCon.Close();
+                    }
+                }
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "")
+            if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "" || txtCodigoFornecedor.Text == "")
             {
                 MessageBox.Show("Existem campos obrigatórios sem conteúdo!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -171,7 +203,8 @@ namespace TccRestaurante
             {
 
                 strSql = "UPDATE produto SET nomeProduto='" + txtProduto.Text + "', descProduto='" + txtDescProduto.Text + "'," +
-                    " valorUnit='" + txtValorUnit.Text + "', qtEstoque='" + txtEstoque.Text + "' WHERE id='" + txtCodigoProduto.Text + "'";
+                    " valorUnit='" + txtValorUnit.Text + "', qtEstoque='" + txtEstoque.Text + "', idFornecedor='"
+                    + txtCodigoFornecedor.Text + "' WHERE id='" + txtCodigoProduto.Text + "'";
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
 
@@ -206,6 +239,41 @@ namespace TccRestaurante
         {
 
         }
+
+        private void txtCodigoFornecedor_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoFornecedor.Text != "")
+            {
+
+                strSql = "SELECT * FROM fornecedor WHERE idFornecedor='" + txtCodigoFornecedor.Text + "'";
+                sqlCon = new MySqlConnection(strCon);
+
+                try
+                {
+                    sqlCon.Open();
+
+                    MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
+
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        txtFornecedor.Text = reader.GetString(1);
+                    }
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+
     }
 }
 

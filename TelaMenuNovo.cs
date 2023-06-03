@@ -29,7 +29,13 @@ namespace TccRestaurante
 
         private void TelaLoginNova_Load(object sender, EventArgs e)
         {
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtDataHora.Text = DateTime.Now.ToString();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -96,6 +102,18 @@ namespace TccRestaurante
         {
             TelaCadastroPagamento pagamento = new TelaCadastroPagamento();
             pagamento.ShowDialog();
+        }
+
+        private void btnCadastroMesas_Click(object sender, EventArgs e)
+        {
+            TelaCadastroMesas mesas = new TelaCadastroMesas();
+            mesas.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            TelaMovimentacaoEstoque movimentacaoEstoque = new TelaMovimentacaoEstoque();
+            movimentacaoEstoque.ShowDialog();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DGVPrinterHelper;
+using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
@@ -6,25 +7,34 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TccRestaurante.Properties;
+using System.Collections.Specialized;
 
 namespace TccRestaurante
 {
     public partial class TelaCaixaNova : Form
     {
+
+        private DataGridView dataGridView;
+        private DataTable dataTable;
         public TelaCaixaNova()
         {
             InitializeComponent();
         }
-
         decimal Total = 0;
         decimal Quantidade = 0;
         decimal ValorDesc = 0;
+        bool botaoClick;
+        bool dadosSalvos;
 
         int quantidadeBanco = 0;
         decimal quantidadeTela= 0;
@@ -77,7 +87,7 @@ namespace TccRestaurante
 
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Produto não cadastrado!");
                     }
                     finally
                     {
@@ -98,8 +108,6 @@ namespace TccRestaurante
 
                     MySqlDataReader reader = comando.ExecuteReader();
 
-
-
                     while (reader.Read())
                     {
                         string[] row =
@@ -107,7 +115,8 @@ namespace TccRestaurante
                         reader.GetString(0),
                         reader.GetString(1),
                         Quantidade.ToString(),
-                        reader.GetString(3)
+                        reader.GetString(3),
+                        reader.GetString(4)
                     };
 
 
@@ -118,7 +127,7 @@ namespace TccRestaurante
 
                     }
 
-                    int columnIndex = dataGridView1.Columns["valorUnit"].Index;
+                    int columnIndex = dataGridView1.Columns["valorProduto"].Index;
 
                     int lastIndex = dataGridView1.Rows.Count - 1;
 
@@ -154,13 +163,72 @@ namespace TccRestaurante
 
         private void TelaCaixaNova_Load(object sender, EventArgs e)
         {
-            txtCodProduto.Enabled = false;
-            txtQuantidade.Enabled = false;
-            txtCodDesconto.Enabled = false;
-            txtPagamento.Enabled = false;
-            btnConfirmarVenda.Enabled = false;
-            btnCancelarVenda.Enabled = false;
-            txtPorPessoa.Enabled = false;
+            txtValorPago.Enabled = false;
+            txtValorTroco.Enabled = false;
+            CarregarDados();
+            if (txtCodVenda.Text != "")
+            {
+                txtCodProduto.Enabled = true;
+                txtQuantidade.Enabled = true;
+                txtCodDesconto.Enabled = true;
+                txtPorPessoa.Enabled = true;
+                txtPagamento.Enabled = true;
+                btnConfirmarVenda.Enabled = true;
+                btnCancelarVenda.Enabled = true;
+                txtFuncionario.Enabled = false;
+
+                btnNovaVenda.Enabled = false;
+                if (Owner is TelaMesas)
+                {
+                    if (txtCodigoMesa.Text != "")
+                    {
+                        string sql = $"SELECT iv.CD_PRODUTO FROM vendas v JOIN itensvenda iv ON v.CD_VENDA = iv.CD_VENDA WHERE v.CD_MESA = {txtCodigoMesa.Text}";
+                        Conexao = new MySqlConnection(strCon);
+                        MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+
+                        try
+                        {
+                            Conexao.Open();
+                            MySqlDataReader reader = comando.ExecuteReader();
+
+
+
+                            while (reader.Read())
+                            {
+                                string[] row =
+                                {
+                            reader.GetString(0),
+                            };
+
+                                dataGridView1.Rows.Clear();
+                                dataGridView1.Rows.Add(row[0]);
+                            }
+
+                        }
+
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            Conexao.Close();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                txtCodProduto.Enabled = false;
+                txtQuantidade.Enabled = false;
+                txtCodDesconto.Enabled = false;
+                txtPagamento.Enabled = false;
+                btnConfirmarVenda.Enabled = false;
+                btnCancelarVenda.Enabled = false;
+                txtPorPessoa.Enabled = false;
+            }
+            
         }
 
         private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
@@ -257,6 +325,7 @@ namespace TccRestaurante
             catch (Exception ex)
             {
                 MessageBox.Show("Funcionário não cadastrado!");
+                //MessageBox.Show(ex.Message);
                 btnNovaVenda.Enabled = true;
                 TelaCaixaNova_Load(sender, e);
             }
@@ -307,7 +376,8 @@ namespace TccRestaurante
         {
             if(dataGridView1.Rows.Count != 0)
             {
-
+                Properties.Settings.Default.DataGrid.Clear();
+                Properties.Settings.Default.Save();
                 quantidadeEstoque();
 
                 string strSql = "UPDATE vendas SET CD_PAGAMENTO='" + txtPagamento.Text + "', QT_VALORTOTAL='" + txtValorTotal.Text + "'" +
@@ -319,7 +389,40 @@ namespace TccRestaurante
                 {
                     Conexao.Open();
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("Venda realizada com sucesso!");
+                    //MessageBox.Show("Venda realizada com sucesso!");
+                    string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nRelatório deverá ser impresso no modo paisagem!";
+                    string caption = "Teste de retorno";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+
+                    result = MessageBox.Show(mensagem ,caption ,buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        String pasta_aplicacao = Application.StartupPath + @"\";
+
+                        DGVPrinter printer = new DGVPrinter();
+
+                        printer.printDocument.DefaultPageSettings.Landscape = true;
+
+                        DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
+                        Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
+                        Bitmap bitmap1 = new Bitmap(img);
+
+                        Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
+                        img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
+                        img1.ImageAlignment = DGVPrinter.Alignment.Center;
+                        img1.ImageLocation = DGVPrinter.Location.Absolute;
+                        printer.ImbeddedImageList.Add(img1);
+
+                        printer.Title = "Restaurante Mister Lee\n\n";
+                        printer.SubTitle = "Relatório venda" + txtCodVenda.Text + " \n";
+                        printer.SubTitleSpacing = 10;
+                        printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
+
+                        printer.PrintPreviewDataGridView(dataGridView1);
+                    }
+
+
                     txtCodProduto.Text = "";
                     txtQuantidade.Text = "";
                     txtCodDesconto.Text = "";
@@ -346,10 +449,23 @@ namespace TccRestaurante
             }
         }
 
+        public Bitmap ResizeBitmap(Bitmap bmp, int width, int height)
+        {
+            Bitmap result = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(result))
+            {
+                g.DrawImage(bmp, 0, 0, width, height);
+            }
+
+            return result;
+        }
+
         private void btnCancelarVenda_Click(object sender, EventArgs e)
         {
             if (txtCodVenda.Text != "")
             {
+                Properties.Settings.Default.DataGrid.Clear();
+                Properties.Settings.Default.Save();
                 string strSql = "DELETE FROM vendas WHERE CD_VENDA = '" + txtCodVenda.Text + "'";
                 Conexao = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, Conexao);
@@ -421,7 +537,7 @@ namespace TccRestaurante
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(txtCodVenda.Text != "")
+            if(txtCodVenda.Text != "" && botaoClick != true)
             {
                 MessageBox.Show("É necessário cancelar ou realizar a venda para sair!");
                 btnCancelarVenda.Focus();
@@ -436,17 +552,17 @@ namespace TccRestaurante
             {
                 DataGridViewRow linhaSelecionada = dataGridView1.SelectedRows[0];
 
-                int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells["codigo"].Value);
+                int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells["codigoProduto"].Value);
 
-                int quantidadeLinha = Convert.ToInt32(linhaSelecionada.Cells["quantidade"].Value);
+                int quantidadeLinha = Convert.ToInt32(linhaSelecionada.Cells["quantidadeProduto"].Value);
 
-                decimal valorLinha = Convert.ToDecimal(linhaSelecionada.Cells["valorUnit"].Value);
+                decimal valorLinha = Convert.ToDecimal(linhaSelecionada.Cells["valorProduto"].Value);
 
-                string queryDelete = "DELETE FROM itensvenda WHERE CD_PRODUTO = @codigo";
+                string queryDelete = "DELETE FROM itensvenda WHERE CD_PRODUTO = @codigoProduto";
                 using (MySqlCommand cmd = new MySqlCommand(queryDelete, Conexao))
                 {
                     Conexao.Open();
-                    cmd.Parameters.AddWithValue("@codigo", idSelecionado);
+                    cmd.Parameters.AddWithValue("@codigoProduto", idSelecionado);
                     cmd.ExecuteNonQuery();
                 }
 
@@ -516,7 +632,6 @@ namespace TccRestaurante
 
         internal void quantidadeEstoque()
         {
-
             DataGridViewRowCollection rows = dataGridView1.Rows;
             DataGridViewRowCollection col = dataGridView1.Rows;
             List<string> produtos = new List<string>();
@@ -525,8 +640,8 @@ namespace TccRestaurante
             string codigo2 = string.Empty;
             foreach (DataGridViewRow row in rows)
             {
-                DataGridViewCell cell = row.Cells["codigo"];
-                DataGridViewCell cell2 = row.Cells["quantidade"];
+                DataGridViewCell cell = row.Cells["codigoProduto"];
+                DataGridViewCell cell2 = row.Cells["quantidadeProduto"];
                 codigo = cell.Value.ToString();
                 codigo2 = cell2.Value.ToString();
                 produtos.Add(codigo);
@@ -549,6 +664,79 @@ namespace TccRestaurante
                 {
                     Conexao.Close();
                 }
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            //StringCollection dados = new StringCollection();
+
+            //foreach (DataGridViewRow row in dataGridView1.Rows)
+            //{
+            //    if (!row.IsNewRow)
+            //    {
+            //        string linha = $"{row.Cells[0].Value}.{row.Cells[1].Value}.{row.Cells[2].Value}.{Convert.ToDecimal(row.Cells[3].Value)}";
+            //        // Adicione os valores das outras colunas, separando-os com vírgula, se necessário
+
+            //        dados.Add(linha);
+            //    }
+            //}
+            //Properties.Settings.Default.venda = Convert.ToInt32(txtCodVenda.Text);
+            //Properties.Settings.Default.DataGrid = dados;
+            //Properties.Settings.Default.Save();
+
+            //MessageBox.Show("Os dados foram salvos.");
+            //botaoClick = true;
+        }
+
+        private void CarregarDados()
+        {
+            //StringCollection dados = Properties.Settings.Default.DataGrid;
+
+            //txtCodVenda.Text = Properties.Settings.Default.venda.ToString();
+            //foreach (string linha in dados)
+            //{
+            //    string[] colunas = linha.Split('.');
+
+            //    // Adicione uma nova linha no DataGridView com os valores das colunas
+            //    int rowIndex = dataGridView1.Rows.Add(colunas);
+
+            //    //dataGridView1.Rows[rowIndex].Cells[3].ValueType = typeof(decimal);
+            //}
+
+            //MessageBox.Show("Os dados foram carregados.");
+        }
+
+
+        private void FecharCaixa()
+        {
+            txtCodProduto.Enabled = false;
+            txtQuantidade.Enabled = false;
+            txtCodDesconto.Enabled = false;
+            txtPorPessoa.Enabled = false;
+            txtPagamento.Enabled = false;
+            btnConfirmarVenda.Enabled = true;
+            btnCancelarVenda.Enabled = true;
+            btnNovaVenda.Enabled = false;
+
+            txtValorPago.Focus();
+        }
+
+        private void TelaCaixaNova_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 121)
+            {
+                FecharCaixa();
+            }
+
+            if (e.KeyChar == 122)
+            {
+                btnConfirmarVenda_Click(sender, e);
+            }
+
+            if (e.KeyChar == 123)
+            {
+                btnCancelarVenda_Click(sender, e);
             }
         }
     }

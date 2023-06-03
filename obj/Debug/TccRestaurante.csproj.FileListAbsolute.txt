@@ -660,6 +660,7 @@ C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.AssemblyReference.cache
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.SuggestedBindingRedirects.cache
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastroMesas.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaCadastrodeDesconto.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.FrmRelProdutos.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaFornecedor.resources
@@ -676,8 +677,11 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaLogin.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMenuNovo.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.Properties.Resources.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMesas.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaVendaMesa.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.GenerateResource.cache
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.CoreCompileInputs.cache
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.csproj.CopyComplete
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.exe
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.pdb
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMovimentacaoEstoque.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaPagamentosUtilizados.resources
