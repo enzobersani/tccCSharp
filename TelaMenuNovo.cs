@@ -115,5 +115,78 @@ namespace TccRestaurante
             TelaMovimentacaoEstoque movimentacaoEstoque = new TelaMovimentacaoEstoque();
             movimentacaoEstoque.ShowDialog();
         }
+
+        private void formasPagamentoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            GraficoFormasPagamentos graficoFormasPagamentos = new GraficoFormasPagamentos();
+            graficoFormasPagamentos.ShowDialog();
+        }
+
+        private void fornecedorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListaFornecedor listaFornecedor = new ListaFornecedor();
+            listaFornecedor.ShowDialog();
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaFuncionario listaFuncionario = new ListaFuncionario();
+            listaFuncionario.ShowDialog();
+        }
+
+        private void formasPagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaPagamentosUtilizados listaPagamentosUtilizados = new ListaPagamentosUtilizados();
+            listaPagamentosUtilizados.ShowDialog();
+        }
+
+        private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListaProduto listaProduto = new ListaProduto();
+            listaProduto.ShowDialog();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroProduto telaCadastroProduto = new TelaCadastroProduto();
+            telaCadastroProduto.ShowDialog();
+        }
+
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroFornecedor telaCadastroFornecedor = new TelaCadastroFornecedor();
+            telaCadastroFornecedor.ShowDialog();
+        }
+
+        private void fabricanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroFuncionario telaCadastroFuncionario = new TelaCadastroFuncionario();
+            telaCadastroFuncionario.ShowDialog();
+        }
+
+        private void descontoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastrodeDesconto telaCadastrodeDesconto = new TelaCadastrodeDesconto();
+            telaCadastrodeDesconto.ShowDialog();
+        }
+
+        private void formasPagametoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroPagamento telaCadastroPagamento = new TelaCadastroPagamento();
+            telaCadastroPagamento.ShowDialog();
+        }
+
+        private void mesasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroMesas telaCadastroMesas = new TelaCadastroMesas();
+            telaCadastroMesas.ShowDialog();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroUsuario telaCadastroUsuario = new TelaCadastroUsuario();
+            telaCadastroUsuario.ShowDialog();
+        }
+
     }
 }

@@ -299,6 +299,7 @@ namespace TccRestaurante
             txtPagamento.Enabled = true;
             btnConfirmarVenda.Enabled = true;
             btnCancelarVenda.Enabled = true;
+            txtValorPago.Enabled = true;
 
             btnNovaVenda.Enabled = false;
             string strSql = "insert into vendas(CD_FUNCIONARIO) " +
@@ -380,7 +381,8 @@ namespace TccRestaurante
                 Properties.Settings.Default.Save();
                 quantidadeEstoque();
 
-                string strSql = "UPDATE vendas SET CD_PAGAMENTO='" + txtPagamento.Text + "', QT_VALORTOTAL='" + txtValorTotal.Text + "'" +
+                string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
+                    "QT_VALORTOTAL='" + txtValorTotal.Text + "'" +
                      " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
                 Conexao = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, Conexao);
@@ -415,7 +417,8 @@ namespace TccRestaurante
                         printer.ImbeddedImageList.Add(img1);
 
                         printer.Title = "Restaurante Mister Lee\n\n";
-                        printer.SubTitle = "Relatório venda" + txtCodVenda.Text + " \n";
+                        printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
+                            txtValorTotal.Text;
                         printer.SubTitleSpacing = 10;
                         printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
 
@@ -431,6 +434,8 @@ namespace TccRestaurante
                     txtCodVenda.Text = "";
                     txtValorTotal.Text = "";
                     txtValorPorPessoa.Text = "";
+                    txtValorPago.Text = "";
+                    txtValorTroco.Text = "";
                     btnNovaVenda.Enabled = true;
                     dataGridView1.Rows.Clear();
                     TelaCaixaNova_Load(sender, e);
@@ -737,6 +742,18 @@ namespace TccRestaurante
             if (e.KeyChar == 123)
             {
                 btnCancelarVenda_Click(sender, e);
+            }
+        }
+
+        private void txtValorPago_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            decimal valorTroco;
+            if (e.KeyChar == 13)
+            {
+
+                valorTroco = Convert.ToDecimal(txtValorPago.Text) - Total;
+
+                txtValorTroco.Text = valorTroco.ToString();
             }
         }
     }

@@ -58,9 +58,25 @@
             this.btnCadastroMesas = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtDataHora = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fabricanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formasPagametoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formasPagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formasPagamentoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,6 +94,7 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -97,9 +114,9 @@
             this.flowLayoutPanel1.Controls.Add(this.panel12);
             this.flowLayoutPanel1.Controls.Add(this.panel13);
             this.flowLayoutPanel1.Controls.Add(this.panel14);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 863);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(261, 834);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -107,14 +124,14 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 121);
+            this.panel1.Size = new System.Drawing.Size(258, 146);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::TccRestaurante.Properties.Resources.restaurante;
-            this.pictureBox2.Location = new System.Drawing.Point(65, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(71, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,7 +141,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.button7);
-            this.panel8.Location = new System.Drawing.Point(3, 130);
+            this.panel8.Location = new System.Drawing.Point(3, 155);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(258, 43);
             this.panel8.TabIndex = 7;
@@ -146,7 +163,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 179);
+            this.panel2.Location = new System.Drawing.Point(3, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(258, 43);
             this.panel2.TabIndex = 8;
@@ -168,7 +185,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(3, 228);
+            this.panel3.Location = new System.Drawing.Point(3, 253);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(258, 43);
             this.panel3.TabIndex = 9;
@@ -190,7 +207,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(3, 277);
+            this.panel4.Location = new System.Drawing.Point(3, 302);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 43);
             this.panel4.TabIndex = 10;
@@ -212,7 +229,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.button4);
-            this.panel5.Location = new System.Drawing.Point(3, 326);
+            this.panel5.Location = new System.Drawing.Point(3, 351);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(258, 43);
             this.panel5.TabIndex = 11;
@@ -234,7 +251,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.button5);
-            this.panel6.Location = new System.Drawing.Point(3, 375);
+            this.panel6.Location = new System.Drawing.Point(3, 400);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 43);
             this.panel6.TabIndex = 12;
@@ -256,7 +273,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.button6);
-            this.panel7.Location = new System.Drawing.Point(3, 424);
+            this.panel7.Location = new System.Drawing.Point(3, 449);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 43);
             this.panel7.TabIndex = 13;
@@ -278,7 +295,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.button9);
-            this.panel10.Location = new System.Drawing.Point(3, 473);
+            this.panel10.Location = new System.Drawing.Point(3, 498);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(258, 43);
             this.panel10.TabIndex = 15;
@@ -300,7 +317,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.button8);
-            this.panel9.Location = new System.Drawing.Point(3, 522);
+            this.panel9.Location = new System.Drawing.Point(3, 547);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(258, 43);
             this.panel9.TabIndex = 16;
@@ -322,7 +339,7 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.button10);
-            this.panel11.Location = new System.Drawing.Point(3, 571);
+            this.panel11.Location = new System.Drawing.Point(3, 596);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(258, 43);
             this.panel11.TabIndex = 17;
@@ -344,7 +361,7 @@
             // panel12
             // 
             this.panel12.Controls.Add(this.btnPagamento);
-            this.panel12.Location = new System.Drawing.Point(3, 620);
+            this.panel12.Location = new System.Drawing.Point(3, 645);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(258, 43);
             this.panel12.TabIndex = 18;
@@ -366,7 +383,7 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.btnCadastroMesas);
-            this.panel13.Location = new System.Drawing.Point(3, 669);
+            this.panel13.Location = new System.Drawing.Point(3, 694);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(258, 43);
             this.panel13.TabIndex = 19;
@@ -388,7 +405,7 @@
             // panel14
             // 
             this.panel14.Controls.Add(this.button11);
-            this.panel14.Location = new System.Drawing.Point(3, 718);
+            this.panel14.Location = new System.Drawing.Point(3, 743);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(258, 43);
             this.panel14.TabIndex = 20;
@@ -407,16 +424,6 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TccRestaurante.Properties.Resources.Logotipo_para_Restaurante_e_Pizzaria_Simples_;
-            this.pictureBox1.Location = new System.Drawing.Point(259, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1275, 863);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -425,13 +432,152 @@
             // 
             this.txtDataHora.Enabled = false;
             this.txtDataHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataHora.Location = new System.Drawing.Point(1295, 14);
+            this.txtDataHora.Location = new System.Drawing.Point(1298, 29);
             this.txtDataHora.Mask = "00/00/0000 90:00";
             this.txtDataHora.Name = "txtDataHora";
             this.txtDataHora.ReadOnly = true;
             this.txtDataHora.Size = new System.Drawing.Size(222, 38);
             this.txtDataHora.TabIndex = 2;
             this.txtDataHora.ValidatingType = typeof(System.DateTime);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TccRestaurante.Properties.Resources.Logotipo_para_Restaurante_e_Pizzaria_Simples___1_;
+            this.pictureBox1.Location = new System.Drawing.Point(256, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1276, 864);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrosToolStripMenuItem,
+            this.listasToolStripMenuItem,
+            this.gráficosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1532, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cadastrosToolStripMenuItem
+            // 
+            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.produtoToolStripMenuItem,
+            this.fornecedorToolStripMenuItem,
+            this.fabricanteToolStripMenuItem,
+            this.descontoToolStripMenuItem,
+            this.formasPagametoToolStripMenuItem,
+            this.mesasToolStripMenuItem,
+            this.usuárioToolStripMenuItem});
+            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // produtoToolStripMenuItem
+            // 
+            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.produtoToolStripMenuItem.Text = "Produto";
+            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
+            // 
+            // fornecedorToolStripMenuItem
+            // 
+            this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
+            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.fornecedorToolStripMenuItem.Text = "Fornecedor";
+            this.fornecedorToolStripMenuItem.Click += new System.EventHandler(this.fornecedorToolStripMenuItem_Click);
+            // 
+            // fabricanteToolStripMenuItem
+            // 
+            this.fabricanteToolStripMenuItem.Name = "fabricanteToolStripMenuItem";
+            this.fabricanteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.fabricanteToolStripMenuItem.Text = "Funcionário";
+            this.fabricanteToolStripMenuItem.Click += new System.EventHandler(this.fabricanteToolStripMenuItem_Click);
+            // 
+            // descontoToolStripMenuItem
+            // 
+            this.descontoToolStripMenuItem.Name = "descontoToolStripMenuItem";
+            this.descontoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.descontoToolStripMenuItem.Text = "Desconto";
+            this.descontoToolStripMenuItem.Click += new System.EventHandler(this.descontoToolStripMenuItem_Click);
+            // 
+            // formasPagametoToolStripMenuItem
+            // 
+            this.formasPagametoToolStripMenuItem.Name = "formasPagametoToolStripMenuItem";
+            this.formasPagametoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.formasPagametoToolStripMenuItem.Text = "Formas Pagameto";
+            this.formasPagametoToolStripMenuItem.Click += new System.EventHandler(this.formasPagametoToolStripMenuItem_Click);
+            // 
+            // mesasToolStripMenuItem
+            // 
+            this.mesasToolStripMenuItem.Name = "mesasToolStripMenuItem";
+            this.mesasToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.mesasToolStripMenuItem.Text = "Mesas";
+            this.mesasToolStripMenuItem.Click += new System.EventHandler(this.mesasToolStripMenuItem_Click);
+            // 
+            // usuárioToolStripMenuItem
+            // 
+            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
+            // 
+            // listasToolStripMenuItem
+            // 
+            this.listasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fornecedorToolStripMenuItem1,
+            this.funcionarioToolStripMenuItem,
+            this.formasPagamentoToolStripMenuItem,
+            this.produtoToolStripMenuItem1});
+            this.listasToolStripMenuItem.Name = "listasToolStripMenuItem";
+            this.listasToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.listasToolStripMenuItem.Text = "Listas";
+            // 
+            // fornecedorToolStripMenuItem1
+            // 
+            this.fornecedorToolStripMenuItem1.Name = "fornecedorToolStripMenuItem1";
+            this.fornecedorToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.fornecedorToolStripMenuItem1.Text = "Fornecedor";
+            this.fornecedorToolStripMenuItem1.Click += new System.EventHandler(this.fornecedorToolStripMenuItem1_Click);
+            // 
+            // funcionarioToolStripMenuItem
+            // 
+            this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.funcionarioToolStripMenuItem.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
+            // 
+            // formasPagamentoToolStripMenuItem
+            // 
+            this.formasPagamentoToolStripMenuItem.Name = "formasPagamentoToolStripMenuItem";
+            this.formasPagamentoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.formasPagamentoToolStripMenuItem.Text = "Formas Pagamento";
+            this.formasPagamentoToolStripMenuItem.Click += new System.EventHandler(this.formasPagamentoToolStripMenuItem_Click);
+            // 
+            // produtoToolStripMenuItem1
+            // 
+            this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
+            this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.produtoToolStripMenuItem1.Text = "Produto";
+            this.produtoToolStripMenuItem1.Click += new System.EventHandler(this.produtoToolStripMenuItem1_Click);
+            // 
+            // gráficosToolStripMenuItem
+            // 
+            this.gráficosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formasPagamentoToolStripMenuItem2});
+            this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
+            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.gráficosToolStripMenuItem.Text = "Gráficos";
+            // 
+            // formasPagamentoToolStripMenuItem2
+            // 
+            this.formasPagamentoToolStripMenuItem2.Name = "formasPagamentoToolStripMenuItem2";
+            this.formasPagamentoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.formasPagamentoToolStripMenuItem2.Text = "Formas Pagamento";
+            this.formasPagamentoToolStripMenuItem2.Click += new System.EventHandler(this.formasPagamentoToolStripMenuItem2_Click);
             // 
             // TelaMenuNovo
             // 
@@ -442,7 +588,9 @@
             this.Controls.Add(this.txtDataHora);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "TelaMenuNovo";
             this.Text = "Menu";
@@ -464,6 +612,8 @@
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,7 +637,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button9;
@@ -503,5 +652,22 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.MaskedTextBox txtDataHora;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fabricanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descontoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formasPagametoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formasPagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gráficosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formasPagamentoToolStripMenuItem2;
     }
 }

@@ -106,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DGVPrinter.cs" />
+    <Compile Include="GraficoFormasPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoFormasPagamentos.Designer.cs">
+      <DependentUpon>GraficoFormasPagamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaPagamentosUtilizados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     <Compile Include="TelaVendaMesa.Designer.cs">
       <DependentUpon>TelaVendaMesa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GraficoFormasPagamentos.resx">
+      <DependentUpon>GraficoFormasPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaPagamentosUtilizados.resx">
       <DependentUpon>ListaPagamentosUtilizados.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +321,7 @@
     <None Include="Resources\sanduiche.png" />
     <None Include="Resources\menu-aberto.png" />
     <None Include="Resources\restaurante.png" />
+    <None Include="Resources\Logotipo para Restaurante e Pizzaria Simples  %281%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

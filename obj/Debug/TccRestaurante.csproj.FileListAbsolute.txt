@@ -685,3 +685,4 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.exe
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.pdb
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMovimentacaoEstoque.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaPagamentosUtilizados.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.GraficoFormasPagamentos.resources

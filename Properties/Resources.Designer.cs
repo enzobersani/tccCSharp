@@ -93,6 +93,16 @@ namespace TccRestaurante.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logotipo_para_Restaurante_e_Pizzaria_Simples___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Logotipo para Restaurante e Pizzaria Simples  (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_aberto {
             get {
                 object obj = ResourceManager.GetObject("menu-aberto", resourceCulture);

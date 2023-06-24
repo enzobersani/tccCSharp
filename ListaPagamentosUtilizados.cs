@@ -99,6 +99,12 @@ namespace TccRestaurante
 
             return result;
         }
+
+        private void btnGrafico_Click(object sender, EventArgs e)
+        {
+            GraficoFormasPagamentos graficoFormasPagamentos = new GraficoFormasPagamentos();
+            graficoFormasPagamentos.ShowDialog();
+        }
     }
 }
 

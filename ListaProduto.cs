@@ -192,7 +192,6 @@ namespace TccRestaurante
                         reader.GetString(2),
                         reader.GetString(3),
                         reader.GetString(4),
-                   
                     };
 
                     //var linha_listview = new ListViewItem(row);
@@ -214,7 +213,7 @@ namespace TccRestaurante
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        public void btnRelatorioProduto_Click(object sender, EventArgs e)
         {
 
             String pasta_aplicacao = Application.StartupPath + @"\";

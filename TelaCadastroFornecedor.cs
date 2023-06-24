@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace TccRestaurante
 {
@@ -31,7 +32,11 @@ namespace TccRestaurante
             else
             {
 
-                strSql = "insert into fornecedor (idFornecedor, nomeFornecedor) values ('" + txtIdFornecedor.Text + "','" + txtNomeFornecedor.Text + "')";
+                strSql = "insert into fornecedor (idFornecedor, nomeFornecedor, NM_RAZAO, NM_ENDERECO, NR_NUMERO, DS_COMPLEMENTO" +
+                    ", NM_CIDADE, NM_UF, CD_CNPJ, DS_EMAIL) values ('" + txtIdFornecedor.Text + "','" + txtNomeFornecedor.Text + "'," +
+                    "'" + txtRazaoSocial.Text + "', '" + txtEndereco.Text + "', '" + txtNumero.Text + "'," +
+                    "'" + txtComplemento.Text + "', '" + txtCidade.Text + "', '" + txtUf.Text + "', '" + txtCNPJ.Text + "'," +
+                    "'" + txtEmail.Text + "')";
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
 
@@ -43,6 +48,14 @@ namespace TccRestaurante
                     txtIdFornecedor.Text = "";
                     txtNomeFornecedor.Text = "";
                     txtIdFornecedor.Focus();
+                    foreach (Control control in groupBox1.Controls)
+                    {
+                        if (control is TextBox)
+                        {
+                            TextBox textBox = (TextBox)control;
+                            textBox.Text = string.Empty;
+                        }
+                    }
                 }
 
                 catch (Exception ex)
@@ -60,8 +73,14 @@ namespace TccRestaurante
         private void button4_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
-            txtIdFornecedor.Text = "";
-            txtNomeFornecedor.Text = "";
+            foreach (Control control in groupBox1.Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = string.Empty;
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
