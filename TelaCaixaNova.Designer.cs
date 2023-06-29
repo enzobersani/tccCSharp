@@ -56,16 +56,16 @@
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtValorPago = new System.Windows.Forms.TextBox();
             this.txtValorTroco = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.codigoProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -146,7 +146,7 @@
             this.btnNovaVenda.Name = "btnNovaVenda";
             this.btnNovaVenda.Size = new System.Drawing.Size(121, 42);
             this.btnNovaVenda.TabIndex = 2;
-            this.btnNovaVenda.Text = "Nova venda";
+            this.btnNovaVenda.Text = "Iniciar Venda";
             this.btnNovaVenda.UseVisualStyleBackColor = false;
             this.btnNovaVenda.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -325,6 +325,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(742, 554);
             this.dataGridView1.TabIndex = 19;
             // 
+            // codigoProduto
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.codigoProduto.DefaultCellStyle = dataGridViewCellStyle3;
+            this.codigoProduto.HeaderText = "Código";
+            this.codigoProduto.Name = "codigoProduto";
+            this.codigoProduto.ReadOnly = true;
+            this.codigoProduto.Width = 68;
+            // 
+            // descProduto
+            // 
+            this.descProduto.HeaderText = "Produto";
+            this.descProduto.Name = "descProduto";
+            this.descProduto.ReadOnly = true;
+            this.descProduto.Width = 350;
+            // 
+            // quantidadeProduto
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.quantidadeProduto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.quantidadeProduto.HeaderText = "Quantidade";
+            this.quantidadeProduto.Name = "quantidadeProduto";
+            this.quantidadeProduto.ReadOnly = true;
+            this.quantidadeProduto.Width = 150;
+            // 
+            // valorProduto
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.valorProduto.DefaultCellStyle = dataGridViewCellStyle5;
+            this.valorProduto.HeaderText = "Valor R$";
+            this.valorProduto.Name = "valorProduto";
+            this.valorProduto.ReadOnly = true;
+            this.valorProduto.Width = 152;
+            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -384,40 +418,6 @@
             this.label11.Size = new System.Drawing.Size(60, 25);
             this.label11.TabIndex = 31;
             this.label11.Text = "Total";
-            // 
-            // codigoProduto
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.codigoProduto.DefaultCellStyle = dataGridViewCellStyle3;
-            this.codigoProduto.HeaderText = "Código";
-            this.codigoProduto.Name = "codigoProduto";
-            this.codigoProduto.ReadOnly = true;
-            this.codigoProduto.Width = 68;
-            // 
-            // descProduto
-            // 
-            this.descProduto.HeaderText = "Produto";
-            this.descProduto.Name = "descProduto";
-            this.descProduto.ReadOnly = true;
-            this.descProduto.Width = 350;
-            // 
-            // quantidadeProduto
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.quantidadeProduto.DefaultCellStyle = dataGridViewCellStyle4;
-            this.quantidadeProduto.HeaderText = "Quantidade";
-            this.quantidadeProduto.Name = "quantidadeProduto";
-            this.quantidadeProduto.ReadOnly = true;
-            this.quantidadeProduto.Width = 150;
-            // 
-            // valorProduto
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.valorProduto.DefaultCellStyle = dataGridViewCellStyle5;
-            this.valorProduto.HeaderText = "Valor R$";
-            this.valorProduto.Name = "valorProduto";
-            this.valorProduto.ReadOnly = true;
-            this.valorProduto.Width = 152;
             // 
             // label5
             // 

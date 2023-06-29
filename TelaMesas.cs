@@ -83,13 +83,20 @@ namespace TccRestaurante
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
-                string condicaoMesa;
+                int condicaoMesa;
 
                 if (reader.Read())
                 {
-                    condicaoMesa = reader.GetString(2);
+                    condicaoMesa = reader.GetInt32(2);
 
-                    if (condicaoMesa == null || condicaoMesa == "A")
+                    //if (condicaoMesa == null || condicaoMesa == 0)
+                    if (condicaoMesa == 1)
+                    {
+                        TelaCaixaNova telaCaixaNova = new TelaCaixaNova() { Owner = this };
+                        telaCaixaNova.txtCodigoMesa.Text = botao;
+                        telaCaixaNova.ShowDialog();
+                    }
+                    else
                     {
                         string mensagem = $"Deseja iniciar uma nova venda na mesa {botao}";
                         string caption = "Teste de retorno";
@@ -99,7 +106,6 @@ namespace TccRestaurante
                         result = MessageBox.Show(mensagem, caption, buttons);
                         if (result == DialogResult.Yes)
                         {
-                            inserirMesas(botao);
                             TelaCaixaNova telaCaixaNova = new TelaCaixaNova() { Owner = this };
                             telaCaixaNova.txtCodigoMesa.Text = botao;
                             telaCaixaNova.ShowDialog();

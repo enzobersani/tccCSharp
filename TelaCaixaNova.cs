@@ -35,6 +35,7 @@ namespace TccRestaurante
         decimal ValorDesc = 0;
         bool botaoClick;
         bool dadosSalvos;
+        bool autorizarFechamento = false;
 
         int quantidadeBanco = 0;
         decimal quantidadeTela= 0;
@@ -74,8 +75,8 @@ namespace TccRestaurante
 
                 if (txtCodProduto.Text != "")
                 {
-                    string strSql = "insert into itensvenda(CD_PRODUTO, CD_VENDA) " +
-                    "values('" + txtCodProduto.Text + "', '" + txtCodVenda.Text + "')";
+                    string strSql = "insert into itensvenda(CD_PRODUTO, CD_VENDA, QT_PRODUTO) " +
+                    "values('" + txtCodProduto.Text + "', '" + txtCodVenda.Text + "', '" + txtQuantidade.Text + "')";
                     Conexao = new MySqlConnection(strCon);
                     MySqlCommand comando = new MySqlCommand(strSql, Conexao);
 
@@ -165,69 +166,97 @@ namespace TccRestaurante
         {
             txtValorPago.Enabled = false;
             txtValorTroco.Enabled = false;
-            CarregarDados();
-            if (txtCodVenda.Text != "")
-            {
-                txtCodProduto.Enabled = true;
-                txtQuantidade.Enabled = true;
-                txtCodDesconto.Enabled = true;
-                txtPorPessoa.Enabled = true;
-                txtPagamento.Enabled = true;
-                btnConfirmarVenda.Enabled = true;
-                btnCancelarVenda.Enabled = true;
-                txtFuncionario.Enabled = false;
-
-                btnNovaVenda.Enabled = false;
-                if (Owner is TelaMesas)
-                {
-                    if (txtCodigoMesa.Text != "")
-                    {
-                        string sql = $"SELECT iv.CD_PRODUTO FROM vendas v JOIN itensvenda iv ON v.CD_VENDA = iv.CD_VENDA WHERE v.CD_MESA = {txtCodigoMesa.Text}";
-                        Conexao = new MySqlConnection(strCon);
-                        MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-
-                        try
-                        {
-                            Conexao.Open();
-                            MySqlDataReader reader = comando.ExecuteReader();
+            if (Owner is TelaMesas) 
+                CarregarDados();
 
 
 
-                            while (reader.Read())
-                            {
-                                string[] row =
-                                {
-                            reader.GetString(0),
-                            };
 
-                                dataGridView1.Rows.Clear();
-                                dataGridView1.Rows.Add(row[0]);
-                            }
 
-                        }
 
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
-                        finally
-                        {
-                            Conexao.Close();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                txtCodProduto.Enabled = false;
-                txtQuantidade.Enabled = false;
-                txtCodDesconto.Enabled = false;
-                txtPagamento.Enabled = false;
-                btnConfirmarVenda.Enabled = false;
-                btnCancelarVenda.Enabled = false;
-                txtPorPessoa.Enabled = false;
-            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //if (txtCodVenda.Text != "")
+            //{
+            //    txtCodProduto.Enabled = true;
+            //    txtQuantidade.Enabled = true;
+            //    txtCodDesconto.Enabled = true;
+            //    txtPorPessoa.Enabled = true;
+            //    txtPagamento.Enabled = true;
+            //    btnConfirmarVenda.Enabled = true;
+            //    btnCancelarVenda.Enabled = true;
+            //    txtFuncionario.Enabled = false;
+
+            //    btnNovaVenda.Enabled = false;
+            //    if (Owner is TelaMesas)
+            //    {
+            //        if (txtCodigoMesa.Text != "")
+            //        {
+            //            string sql = $"SELECT iv.CD_PRODUTO FROM vendas v JOIN itensvenda iv ON v.CD_VENDA = iv.CD_VENDA WHERE v.CD_MESA = {txtCodigoMesa.Text}";
+            //            Conexao = new MySqlConnection(strCon);
+            //            MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+
+            //            try
+            //            {
+            //                Conexao.Open();
+            //                MySqlDataReader reader = comando.ExecuteReader();
+
+
+
+            //                while (reader.Read())
+            //                {
+            //                    string[] row =
+            //                    {
+            //                reader.GetString(0),
+            //                };
+
+            //                    dataGridView1.Rows.Clear();
+            //                    dataGridView1.Rows.Add(row[0]);
+            //                }
+
+            //            }
+
+            //            catch (Exception ex)
+            //            {
+            //                MessageBox.Show(ex.Message);
+            //            }
+            //            finally
+            //            {
+            //                Conexao.Close();
+            //            }
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    txtCodProduto.Enabled = false;
+            //    txtQuantidade.Enabled = false;
+            //    txtCodDesconto.Enabled = false;
+            //    txtPagamento.Enabled = false;
+            //    btnConfirmarVenda.Enabled = false;
+            //    btnCancelarVenda.Enabled = false;
+            //    txtPorPessoa.Enabled = false;
+            //}
             
         }
 
@@ -381,74 +410,158 @@ namespace TccRestaurante
                 Properties.Settings.Default.Save();
                 quantidadeEstoque();
 
-                string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
-                    "QT_VALORTOTAL='" + txtValorTotal.Text + "'" +
-                     " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
-                Conexao = new MySqlConnection(strCon);
-                MySqlCommand comando = new MySqlCommand(strSql, Conexao);
-
-                try
+                if (txtCodigoMesa.Text != "")
                 {
-                    Conexao.Open();
-                    comando.ExecuteNonQuery();
-                    //MessageBox.Show("Venda realizada com sucesso!");
-                    string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nRelatório deverá ser impresso no modo paisagem!";
-                    string caption = "Teste de retorno";
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    DialogResult result;
+                    string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
+                        "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
+                         " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
+                    Conexao = new MySqlConnection(strCon);
+                    MySqlCommand comando = new MySqlCommand(strSql, Conexao);
 
-                    result = MessageBox.Show(mensagem ,caption ,buttons);
-                    if (result == DialogResult.Yes)
+                    try
                     {
-                        String pasta_aplicacao = Application.StartupPath + @"\";
+                        Conexao.Open();
+                        comando.ExecuteNonQuery();
+                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nDeseja gerar o relatório da venda?";
+                        string caption = "Teste de retorno";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result;
 
-                        DGVPrinter printer = new DGVPrinter();
+                        result = MessageBox.Show(mensagem, caption, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            String pasta_aplicacao = Application.StartupPath + @"\";
 
-                        printer.printDocument.DefaultPageSettings.Landscape = true;
+                            DGVPrinter printer = new DGVPrinter();
 
-                        DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
-                        Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
-                        Bitmap bitmap1 = new Bitmap(img);
 
-                        Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
-                        img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
-                        img1.ImageAlignment = DGVPrinter.Alignment.Center;
-                        img1.ImageLocation = DGVPrinter.Location.Absolute;
-                        printer.ImbeddedImageList.Add(img1);
 
-                        printer.Title = "Restaurante Mister Lee\n\n";
-                        printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
-                            txtValorTotal.Text;
-                        printer.SubTitleSpacing = 10;
-                        printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
+                            printer.printDocument.DefaultPageSettings.Landscape = true;
 
-                        printer.PrintPreviewDataGridView(dataGridView1);
+                            DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
+                            Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
+                            Bitmap bitmap1 = new Bitmap(img);
+                            //printer.printDocument.DefaultPageSettings.Margins.Top = 150;
+
+                            Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
+                            img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
+                            img1.ImageAlignment = DGVPrinter.Alignment.Center;
+                            img1.ImageLocation = DGVPrinter.Location.Absolute;
+                            printer.ImbeddedImageList.Add(img1);
+
+                            printer.Title = "Restaurante Mister Lee\n";
+                            printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
+                                txtValorTotal.Text + "R$\n\n";
+                            printer.TitleSpacing = 70;
+                            printer.SubTitleBackground = new SolidBrush(Color.Sienna);
+                            printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
+
+                            printer.PrintPreviewDataGridView(dataGridView1);
+                        }
+
+
+                        txtCodProduto.Text = "";
+                        txtQuantidade.Text = "";
+                        txtCodDesconto.Text = "";
+                        txtPagamento.Text = "";
+                        txtPorPessoa.Text = "";
+                        txtCodVenda.Text = "";
+                        txtValorTotal.Text = "";
+                        txtValorPorPessoa.Text = "";
+                        txtValorPago.Text = "";
+                        txtValorTroco.Text = "";
+                        btnNovaVenda.Enabled = true;
+                        dataGridView1.Rows.Clear();
+                        TelaCaixaNova_Load(sender, e);
                     }
 
-
-                    txtCodProduto.Text = "";
-                    txtQuantidade.Text = "";
-                    txtCodDesconto.Text = "";
-                    txtPagamento.Text = "";
-                    txtPorPessoa.Text = "";
-                    txtCodVenda.Text = "";
-                    txtValorTotal.Text = "";
-                    txtValorPorPessoa.Text = "";
-                    txtValorPago.Text = "";
-                    txtValorTroco.Text = "";
-                    btnNovaVenda.Enabled = true;
-                    dataGridView1.Rows.Clear();
-                    TelaCaixaNova_Load(sender, e);
+                    catch (Exception ex)
+                    {
+                        // MessageBox.Show("Campos obrigatórios não preenchido!");
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        Conexao.Close();
+                    }
                 }
-
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Campos obrigatórios não preenchido!");
+                    string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
+                   "QT_VALORTOTAL='" + txtValorTotal.Text +
+                   "' WHERE CD_VENDA='" + txtCodVenda.Text + "'";
+                    Conexao = new MySqlConnection(strCon);
+                    MySqlCommand comando = new MySqlCommand(strSql, Conexao);
+
+                    try
+                    {
+                        Conexao.Open();
+                        comando.ExecuteNonQuery();
+                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nDeseja gerar o relatório da venda?";
+                        string caption = "Teste de retorno";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result;
+
+                        result = MessageBox.Show(mensagem, caption, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            String pasta_aplicacao = Application.StartupPath + @"\";
+
+                            DGVPrinter printer = new DGVPrinter();
+
+
+
+                            printer.printDocument.DefaultPageSettings.Landscape = true;
+
+                            DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
+                            Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
+                            Bitmap bitmap1 = new Bitmap(img);
+                            //printer.printDocument.DefaultPageSettings.Margins.Top = 150;
+
+                            Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
+                            img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
+                            img1.ImageAlignment = DGVPrinter.Alignment.Center;
+                            img1.ImageLocation = DGVPrinter.Location.Absolute;
+                            printer.ImbeddedImageList.Add(img1);
+
+                            printer.Title = "Restaurante Mister Lee\n";
+                            printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
+                                txtValorTotal.Text + "R$\n\n";
+                            printer.TitleSpacing = 70;
+                            printer.SubTitleBackground = new SolidBrush(Color.Sienna);
+                            printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
+
+                            printer.PrintPreviewDataGridView(dataGridView1);
+                        }
+
+
+                        txtCodProduto.Text = "";
+                        txtQuantidade.Text = "";
+                        txtCodDesconto.Text = "";
+                        txtPagamento.Text = "";
+                        txtPorPessoa.Text = "";
+                        txtCodVenda.Text = "";
+                        txtValorTotal.Text = "";
+                        txtValorPorPessoa.Text = "";
+                        txtValorPago.Text = "";
+                        txtValorTroco.Text = "";
+                        btnNovaVenda.Enabled = true;
+                        dataGridView1.Rows.Clear();
+                        TelaCaixaNova_Load(sender, e);
+                    }
+
+                    catch (Exception ex)
+                    {
+                        // MessageBox.Show("Campos obrigatórios não preenchido!");
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        Conexao.Close();
+                    }
                 }
-                finally
-                {
-                    Conexao.Close();
-                }
+
+                alterarSituacaoMesa0();
 
                 Total = 0;
             }
@@ -547,6 +660,8 @@ namespace TccRestaurante
                 MessageBox.Show("É necessário cancelar ou realizar a venda para sair!");
                 btnCancelarVenda.Focus();
                 return;
+            //}else if(autorizarFechamento == true){
+            //    this.Close();
             }
             this.Close();
         }
@@ -674,42 +789,252 @@ namespace TccRestaurante
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //StringCollection dados = new StringCollection();
+            if (dataGridView1.Rows.Count != 0)
+            {
+                Properties.Settings.Default.DataGrid.Clear();
+                Properties.Settings.Default.Save();
+                //quantidadeEstoque();
 
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-            //    if (!row.IsNewRow)
-            //    {
-            //        string linha = $"{row.Cells[0].Value}.{row.Cells[1].Value}.{row.Cells[2].Value}.{Convert.ToDecimal(row.Cells[3].Value)}";
-            //        // Adicione os valores das outras colunas, separando-os com vírgula, se necessário
+                string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', " +
+                    "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
+                     " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
+                Conexao = new MySqlConnection(strCon);
+                MySqlCommand comando = new MySqlCommand(strSql, Conexao);
 
-            //        dados.Add(linha);
-            //    }
-            //}
-            //Properties.Settings.Default.venda = Convert.ToInt32(txtCodVenda.Text);
-            //Properties.Settings.Default.DataGrid = dados;
-            //Properties.Settings.Default.Save();
+                try
+                {
+                    Conexao.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Venda salva com sucesso!");
+                    alterarSituacaoMesa1();
+                }
 
-            //MessageBox.Show("Os dados foram salvos.");
-            //botaoClick = true;
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Campos obrigatórios não preenchido!");
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
+
+                this.Close();
+                autorizarFechamento = true;
+            }
         }
 
         private void CarregarDados()
         {
-            //StringCollection dados = Properties.Settings.Default.DataGrid;
+            try
+            {
+                //quantidadeTela = Convert.ToDecimal(txtQuantidade.Text);
 
-            //txtCodVenda.Text = Properties.Settings.Default.venda.ToString();
-            //foreach (string linha in dados)
+                Conexao = new MySqlConnection(strCon);
+
+                string sql = "SELECT * " +
+                            "FROM vendas " +
+                            "WHERE CD_MESA=" + txtCodigoMesa.Text;
+
+                Conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    txtFuncionario.Text = reader.GetString(1);
+                    txtCodVenda.Text = reader.GetInt32(0).ToString();
+                    txtValorTotal.Text = reader.GetString(4);
+
+                    txtFuncionario.Enabled = false;
+                    btnNovaVenda.Enabled = false;
+                    txtCodProduto.Enabled = true;
+                    txtQuantidade.Enabled = true;
+                    txtCodDesconto.Enabled = true;
+                    txtPagamento.Enabled = true;
+                    btnSalvar.Enabled = true;
+                    btnCancelarVenda.Enabled = true;
+                    btnConfirmarVenda.Enabled = true;
+                    txtPorPessoa.Enabled = true;
+                    txtValorTroco.Enabled = true;
+                    txtValorPago.Enabled = true;
+
+                    carregarListaProduto();
+                }
+                else
+                {
+                    //string strSql = "insert into vendas(CD_FUNCIONARIO) " +
+                    //"values('" + txtFuncionario.Text + "')";
+                    //Conexao = new MySqlConnection(strCon);
+                    //MySqlCommand comando2 = new MySqlCommand(strSql, Conexao);
+
+                    //try
+                    //{
+                    //    Conexao.Open();
+                    //    comando.ExecuteNonQuery();
+                    //    MessageBox.Show("Venda iniciada!");
+                    //    string strSelect = "SELECT MAX(CD_VENDA) FROM vendas";
+
+                    //    MySqlCommand comando2 = new MySqlCommand(strSelect, Conexao);
+                    //    MySqlDataReader reader = comando2.ExecuteReader();
+                    //    if (reader.Read())
+                    //    {
+                    //        txtCodVenda.Text = reader.GetString(0);
+                    //    }
+                    //    txtCodProduto.Focus();
+                    //}
+
+                    //catch (Exception ex)
+                    //{
+                    //    MessageBox.Show("Funcionário não cadastrado!");
+                    //    //MessageBox.Show(ex.Message);
+                    //    btnNovaVenda.Enabled = true;
+                    //    TelaCaixaNova_Load(sender, e);
+                    //}
+                    //finally
+                    //{
+                    //    Conexao.Close();
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void carregarListaProduto()
+        {
+            string codigoProduto;
+
+            try
+            {
+
+                Conexao = new MySqlConnection(strCon);
+
+                string sql = "SELECT * FROM itensvenda WHERE CD_VENDA=" + txtCodVenda.Text;
+
+                Conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                dataGridView1.Rows.Clear();
+
+                while (reader.Read())
+                {
+                    string[] row =
+                    {
+                        reader.GetString(1),
+                        reader.GetString(2),
+                    };
+
+                    try
+                    {
+
+                        Conexao = new MySqlConnection(strCon);
+
+                        string sql2 = "SELECT nomeProduto, valorUnit FROM produto WHERE id=" + row[0];
+
+                        Conexao.Open();
+
+                        MySqlCommand comando2 = new MySqlCommand(sql2, Conexao);
+
+                        MySqlDataReader reader2 = comando2.ExecuteReader();
+
+                        dataGridView1.Rows.Clear();
+                        string row1, row2;
+
+                        if (reader2.Read())
+                        {
+
+                            row1 = reader2.GetString(0);
+                            row2 = reader2.GetString(1);
+
+                            var linha_listview = new ListViewItem(row2);
+                            dataGridView1.Rows.Add(row[0], row1, row[1], row2);
+
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        Conexao.Close();
+                    }
+
+                   // var linha_listview = new ListViewItem(row);
+                   // dataGridView1.Rows.Add(row[0], , row[1], "");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+
+            //foreach (DataGridViewRow row in dataGridView1.Rows)
             //{
-            //    string[] colunas = linha.Split('.');
+            //    // Verifica se a linha não é uma linha de cabeçalho
+            //    if (!row.IsNewRow)
+            //    {
+            //        // Obtém o valor do ID da coluna específica (supondo que seja a primeira coluna)
+            //        int id = Convert.ToInt32(row.Cells[0].Value);
 
-            //    // Adicione uma nova linha no DataGridView com os valores das colunas
-            //    int rowIndex = dataGridView1.Rows.Add(colunas);
+            //        // Faça o que desejar com o ID...
 
-            //    //dataGridView1.Rows[rowIndex].Cells[3].ValueType = typeof(decimal);
+            //        try
+            //        {
+
+            //            Conexao = new MySqlConnection(strCon);
+
+            //            string sql = "SELECT nomeProduto, valorUnit FROM produto WHERE id=" + id;
+
+            //            Conexao.Open();
+
+            //            MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+            //            MySqlDataReader reader = comando.ExecuteReader();
+
+            //            dataGridView1.Rows.Clear();
+
+            //            while (reader.Read())
+            //            {
+            //                string[] row2 =
+            //                {
+            //                    reader.GetString(1),
+            //                    reader.GetString(2),
+            //                };
+
+            //                var linha_listview = new ListViewItem(row2);
+            //                dataGridView1.Rows.Add("", row2[0], "", row2[1]);
+
+            //            }
+
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message);
+            //        }
+            //        finally
+            //        {
+            //            Conexao.Close();
+            //        }
+            //    }
             //}
-
-            //MessageBox.Show("Os dados foram carregados.");
         }
 
 
@@ -754,6 +1079,48 @@ namespace TccRestaurante
                 valorTroco = Convert.ToDecimal(txtValorPago.Text) - Total;
 
                 txtValorTroco.Text = valorTroco.ToString();
+            }
+        }
+
+        private void alterarSituacaoMesa0()
+        {
+            string strUpdate = "UPDATE mesascadastro SET TP_SITUACAO='" + 0 + "' WHERE CD_MESA= '" + txtCodigoMesa.Text + "'";
+            Conexao = new MySqlConnection(strCon);
+            MySqlCommand comando = new MySqlCommand(strUpdate, Conexao);
+
+            try
+            {
+                Conexao.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void alterarSituacaoMesa1()
+        {
+            string strUpdate = "UPDATE mesascadastro SET TP_SITUACAO='" + 1 + "' WHERE CD_MESA= '" + txtCodigoMesa.Text + "'";
+            Conexao = new MySqlConnection(strCon);
+            MySqlCommand comando = new MySqlCommand(strUpdate, Conexao);
+
+            try
+            {
+                Conexao.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
             }
         }
     }

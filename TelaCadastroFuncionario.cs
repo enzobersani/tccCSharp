@@ -116,7 +116,7 @@ namespace TccRestaurante
                 {
                     sqlCon.Open();
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("Produto exluído com sucesso!");
+                    MessageBox.Show("Funcionário exluído com sucesso!");
                     button1.Enabled = true;
                     txtCodigoFuncionario.Text = "";
                     txtNomeFuncionario.Text = "";

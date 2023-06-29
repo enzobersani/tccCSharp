@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace TccRestaurante
 {
@@ -62,6 +63,57 @@ namespace TccRestaurante
         {
             ListaPagamentosUtilizados listaPagamentosUtilizados = new ListaPagamentosUtilizados();
             listaPagamentosUtilizados.ShowDialog();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in groupBox1.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Text = string.Empty;
+                }
+            }
+
+            btnSalvar.Enabled = true;
+            btnAtualizar.Enabled = false;
+        }
+
+        private void txtCodigoPagamento_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoPagamento.Text != "")
+            {
+
+                strSql = "SELECT * FROM pagamento WHERE CD_PAGAMENTO='" + txtCodigoPagamento.Text + "'";
+                sqlCon = new MySqlConnection(strCon);
+
+                try
+                {
+                    sqlCon.Open();
+
+                    MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
+
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        btnAtualizar.Enabled = true;
+                        btnSalvar.Enabled = false;
+                        txtNomePagamento.Text = reader.GetString(1);
+                        txtDescricaoPagamento.Text = reader.GetString(2);
+                    }
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
+            }
         }
     }
 }

@@ -24,6 +24,10 @@ namespace TccRestaurante
 
         private void GraficoFormasPagamentos_Load(object sender, EventArgs e)
         {
+            txtDataInicial.Text = DateTime.Now.AddMonths(-1).ToString("dd/MM/yyyy");
+            txtDataFinal.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            DateTime dataInicial = DateTime.Now.AddMonths(-1);
+            DateTime dataFinal = DateTime.Now;
             chart1.Series.Clear();
             chart1.Titles.Clear();
             chart1.Legends.Clear();
@@ -41,7 +45,12 @@ namespace TccRestaurante
             MySqlConnection con = new MySqlConnection(stringC);
             MySqlCommand comados = con.CreateCommand();
             con.Open();
-            comados.CommandText = "SELECT fp.CD_PAGAMENTO, fp.NM_PAGAMENTO, COUNT(*) AS quantidade FROM vendas v JOIN pagamento fp ON v.CD_PAGAMENTO = fp.CD_PAGAMENTO GROUP BY fp.NM_PAGAMENTO, fp.NM_PAGAMENTO";
+            //comados.CommandText = "SELECT fp.CD_PAGAMENTO, fp.NM_PAGAMENTO, COUNT(*) AS quantidade FROM vendas v JOIN pagamento fp ON v.CD_PAGAMENTO = fp.CD_PAGAMENTO GROUP BY fp.NM_PAGAMENTO, fp.NM_PAGAMENTO";
+            comados.CommandText = "SELECT fp.CD_PAGAMENTO, fp.NM_PAGAMENTO, COUNT(*) AS quantidade " +
+                       "FROM vendas v " +
+                       "JOIN pagamento fp ON v.CD_PAGAMENTO = fp.CD_PAGAMENTO " +
+                       "WHERE v.DT_VENDA >='" + dataInicial.ToString("yyyy-MM-dd") + "'AND v.DT_VENDA <='" + dataFinal.ToString("yyyy-MM-dd") + "'" +
+                       "GROUP BY fp.CD_PAGAMENTO, fp.NM_PAGAMENTO";
             MySqlDataReader resultado = comados.ExecuteReader();
 
             while (resultado.Read())
