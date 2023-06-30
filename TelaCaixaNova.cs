@@ -167,97 +167,7 @@ namespace TccRestaurante
             txtValorPago.Enabled = false;
             txtValorTroco.Enabled = false;
             if (Owner is TelaMesas) 
-                CarregarDados();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //if (txtCodVenda.Text != "")
-            //{
-            //    txtCodProduto.Enabled = true;
-            //    txtQuantidade.Enabled = true;
-            //    txtCodDesconto.Enabled = true;
-            //    txtPorPessoa.Enabled = true;
-            //    txtPagamento.Enabled = true;
-            //    btnConfirmarVenda.Enabled = true;
-            //    btnCancelarVenda.Enabled = true;
-            //    txtFuncionario.Enabled = false;
-
-            //    btnNovaVenda.Enabled = false;
-            //    if (Owner is TelaMesas)
-            //    {
-            //        if (txtCodigoMesa.Text != "")
-            //        {
-            //            string sql = $"SELECT iv.CD_PRODUTO FROM vendas v JOIN itensvenda iv ON v.CD_VENDA = iv.CD_VENDA WHERE v.CD_MESA = {txtCodigoMesa.Text}";
-            //            Conexao = new MySqlConnection(strCon);
-            //            MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-
-            //            try
-            //            {
-            //                Conexao.Open();
-            //                MySqlDataReader reader = comando.ExecuteReader();
-
-
-
-            //                while (reader.Read())
-            //                {
-            //                    string[] row =
-            //                    {
-            //                reader.GetString(0),
-            //                };
-
-            //                    dataGridView1.Rows.Clear();
-            //                    dataGridView1.Rows.Add(row[0]);
-            //                }
-
-            //            }
-
-            //            catch (Exception ex)
-            //            {
-            //                MessageBox.Show(ex.Message);
-            //            }
-            //            finally
-            //            {
-            //                Conexao.Close();
-            //            }
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    txtCodProduto.Enabled = false;
-            //    txtQuantidade.Enabled = false;
-            //    txtCodDesconto.Enabled = false;
-            //    txtPagamento.Enabled = false;
-            //    btnConfirmarVenda.Enabled = false;
-            //    btnCancelarVenda.Enabled = false;
-            //    txtPorPessoa.Enabled = false;
-            //}
-            
+                CarregarDados();      
         }
 
         private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
@@ -309,11 +219,12 @@ namespace TccRestaurante
 
         private void txtPorPessoa_KeyPress(object sender, KeyPressEventArgs e)
         {
+            decimal valorPorPessoa;
             if(e.KeyChar == 13)
             {
-                Total = Total / Convert.ToDecimal(txtPorPessoa.Text);
+                valorPorPessoa = Total / Convert.ToDecimal(txtPorPessoa.Text);
 
-                txtValorPorPessoa.Text = Total.ToString("F");
+                txtValorPorPessoa.Text = valorPorPessoa.ToString("F");
 
                 txtPorPessoa.Text = "";
             }
@@ -329,6 +240,7 @@ namespace TccRestaurante
             btnConfirmarVenda.Enabled = true;
             btnCancelarVenda.Enabled = true;
             txtValorPago.Enabled = true;
+            btnSalvar.Enabled = true;
 
             btnNovaVenda.Enabled = false;
             string strSql = "insert into vendas(CD_FUNCIONARIO) " +
@@ -355,9 +267,7 @@ namespace TccRestaurante
             catch (Exception ex)
             {
                 MessageBox.Show("Funcionário não cadastrado!");
-                //MessageBox.Show(ex.Message);
                 btnNovaVenda.Enabled = true;
-                TelaCaixaNova_Load(sender, e);
             }
             finally
             {
@@ -441,7 +351,6 @@ namespace TccRestaurante
                             DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
                             Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
                             Bitmap bitmap1 = new Bitmap(img);
-                            //printer.printDocument.DefaultPageSettings.Margins.Top = 150;
 
                             Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
                             img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
@@ -472,13 +381,14 @@ namespace TccRestaurante
                         txtValorTroco.Text = "";
                         btnNovaVenda.Enabled = true;
                         dataGridView1.Rows.Clear();
-                        TelaCaixaNova_Load(sender, e);
+                        alterarSituacaoMesa0();
+                        if (Owner is TelaMesas)
+                            this.Close();
                     }
 
                     catch (Exception ex)
                     {
-                        // MessageBox.Show("Campos obrigatórios não preenchido!");
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Modo de pagamento não informado!");
                     }
                     finally
                     {
@@ -516,7 +426,6 @@ namespace TccRestaurante
                             DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
                             Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
                             Bitmap bitmap1 = new Bitmap(img);
-                            //printer.printDocument.DefaultPageSettings.Margins.Top = 150;
 
                             Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
                             img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
@@ -547,21 +456,21 @@ namespace TccRestaurante
                         txtValorTroco.Text = "";
                         btnNovaVenda.Enabled = true;
                         dataGridView1.Rows.Clear();
-                        TelaCaixaNova_Load(sender, e);
+                        alterarSituacaoMesa0();
+                        if (Owner is TelaMesas)
+                            this.Close();
+
                     }
 
                     catch (Exception ex)
                     {
-                        // MessageBox.Show("Campos obrigatórios não preenchido!");
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Modo de pagamento não informado!");
                     }
                     finally
                     {
                         Conexao.Close();
                     }
                 }
-
-                alterarSituacaoMesa0();
 
                 Total = 0;
             }
@@ -603,7 +512,6 @@ namespace TccRestaurante
                     txtValorPorPessoa.Text = "";
                     btnNovaVenda.Enabled = true;
                     dataGridView1.Rows.Clear();
-                    TelaCaixaNova_Load(sender, e);
                 }
 
                 catch (Exception ex)
@@ -638,7 +546,6 @@ namespace TccRestaurante
                     txtValorPorPessoa.Text = "";
                     btnNovaVenda.Enabled = true;
                     dataGridView1.Rows.Clear();
-                    TelaCaixaNova_Load(sender, e);
                 }
 
                 catch (Exception ex)
@@ -650,6 +557,8 @@ namespace TccRestaurante
                     Conexao.Close();
                 }
                 Total = 0;
+
+                alterarSituacaoMesa0();
             }
         }
 
@@ -660,8 +569,6 @@ namespace TccRestaurante
                 MessageBox.Show("É necessário cancelar ou realizar a venda para sair!");
                 btnCancelarVenda.Focus();
                 return;
-            //}else if(autorizarFechamento == true){
-            //    this.Close();
             }
             this.Close();
         }
@@ -670,6 +577,8 @@ namespace TccRestaurante
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                Total = Convert.ToDecimal(txtValorTotal.Text);
+
                 DataGridViewRow linhaSelecionada = dataGridView1.SelectedRows[0];
 
                 int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells["codigoProduto"].Value);
@@ -791,9 +700,6 @@ namespace TccRestaurante
         {
             if (dataGridView1.Rows.Count != 0)
             {
-                Properties.Settings.Default.DataGrid.Clear();
-                Properties.Settings.Default.Save();
-                //quantidadeEstoque();
 
                 string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', " +
                     "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
@@ -825,14 +731,14 @@ namespace TccRestaurante
 
         private void CarregarDados()
         {
+            int tpSituacao = 0;
+
             try
             {
-                //quantidadeTela = Convert.ToDecimal(txtQuantidade.Text);
-
                 Conexao = new MySqlConnection(strCon);
 
-                string sql = "SELECT * " +
-                            "FROM vendas " +
+                string sql = "SELECT TP_SITUACAO " +
+                            "FROM mesascadastro " +
                             "WHERE CD_MESA=" + txtCodigoMesa.Text;
 
                 Conexao.Open();
@@ -843,59 +749,7 @@ namespace TccRestaurante
 
                 if (reader.Read())
                 {
-                    txtFuncionario.Text = reader.GetString(1);
-                    txtCodVenda.Text = reader.GetInt32(0).ToString();
-                    txtValorTotal.Text = reader.GetString(4);
-
-                    txtFuncionario.Enabled = false;
-                    btnNovaVenda.Enabled = false;
-                    txtCodProduto.Enabled = true;
-                    txtQuantidade.Enabled = true;
-                    txtCodDesconto.Enabled = true;
-                    txtPagamento.Enabled = true;
-                    btnSalvar.Enabled = true;
-                    btnCancelarVenda.Enabled = true;
-                    btnConfirmarVenda.Enabled = true;
-                    txtPorPessoa.Enabled = true;
-                    txtValorTroco.Enabled = true;
-                    txtValorPago.Enabled = true;
-
-                    carregarListaProduto();
-                }
-                else
-                {
-                    //string strSql = "insert into vendas(CD_FUNCIONARIO) " +
-                    //"values('" + txtFuncionario.Text + "')";
-                    //Conexao = new MySqlConnection(strCon);
-                    //MySqlCommand comando2 = new MySqlCommand(strSql, Conexao);
-
-                    //try
-                    //{
-                    //    Conexao.Open();
-                    //    comando.ExecuteNonQuery();
-                    //    MessageBox.Show("Venda iniciada!");
-                    //    string strSelect = "SELECT MAX(CD_VENDA) FROM vendas";
-
-                    //    MySqlCommand comando2 = new MySqlCommand(strSelect, Conexao);
-                    //    MySqlDataReader reader = comando2.ExecuteReader();
-                    //    if (reader.Read())
-                    //    {
-                    //        txtCodVenda.Text = reader.GetString(0);
-                    //    }
-                    //    txtCodProduto.Focus();
-                    //}
-
-                    //catch (Exception ex)
-                    //{
-                    //    MessageBox.Show("Funcionário não cadastrado!");
-                    //    //MessageBox.Show(ex.Message);
-                    //    btnNovaVenda.Enabled = true;
-                    //    TelaCaixaNova_Load(sender, e);
-                    //}
-                    //finally
-                    //{
-                    //    Conexao.Close();
-                    //}
+                    tpSituacao = reader.GetInt32(0);
                 }
             }
             catch (Exception ex)
@@ -905,6 +759,71 @@ namespace TccRestaurante
             finally
             {
                 Conexao.Close();
+            }
+
+            if (tpSituacao == 1)
+            {
+                try
+                {
+                    Conexao = new MySqlConnection(strCon);
+
+                    string sql = "SELECT * " +
+                                 "FROM vendas " +
+                                 "WHERE CD_MESA=" + txtCodigoMesa.Text +
+                                 " AND CD_VENDA = (SELECT MAX(CD_VENDA) FROM vendas WHERE CD_MESA=" + txtCodigoMesa.Text + ")";
+
+
+                    Conexao.Open();
+
+                    MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        txtFuncionario.Text = reader.GetString(1);
+                        txtCodVenda.Text = reader.GetInt32(0).ToString();
+                        txtValorTotal.Text = reader.GetString(4);
+
+                        txtFuncionario.Enabled = false;
+                        btnNovaVenda.Enabled = false;
+                        txtCodProduto.Enabled = true;
+                        txtQuantidade.Enabled = true;
+                        txtCodDesconto.Enabled = true;
+                        txtPagamento.Enabled = true;
+                        btnSalvar.Enabled = true;
+                        btnCancelarVenda.Enabled = true;
+                        btnConfirmarVenda.Enabled = true;
+                        txtPorPessoa.Enabled = true;
+                        txtValorTroco.Enabled = true;
+                        txtValorPago.Enabled = true;
+
+                        carregarListaProduto();
+                    }
+                    else
+                    {
+                        txtFuncionario.Enabled = true;
+                        btnNovaVenda.Enabled = true;
+                        txtCodProduto.Enabled = false;
+                        txtQuantidade.Enabled = false;
+                        txtCodDesconto.Enabled = false;
+                        txtPagamento.Enabled = false;
+                        btnSalvar.Enabled = false;
+                        btnCancelarVenda.Enabled = false;
+                        btnConfirmarVenda.Enabled = false;
+                        txtPorPessoa.Enabled = false;
+                        txtValorTroco.Enabled = false;
+                        txtValorPago.Enabled = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                }
             }
         }
 
@@ -914,15 +833,10 @@ namespace TccRestaurante
 
             try
             {
-
                 Conexao = new MySqlConnection(strCon);
-
                 string sql = "SELECT * FROM itensvenda WHERE CD_VENDA=" + txtCodVenda.Text;
-
                 Conexao.Open();
-
                 MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 dataGridView1.Rows.Clear();
@@ -932,50 +846,32 @@ namespace TccRestaurante
                     string[] row =
                     {
                         reader.GetString(1),
-                        reader.GetString(2),
+                        reader.GetString(2)
                     };
 
                     try
                     {
-
-                        Conexao = new MySqlConnection(strCon);
-
-                        string sql2 = "SELECT nomeProduto, valorUnit FROM produto WHERE id=" + row[0];
-
-                        Conexao.Open();
-
-                        MySqlCommand comando2 = new MySqlCommand(sql2, Conexao);
-
-                        MySqlDataReader reader2 = comando2.ExecuteReader();
-
-                        dataGridView1.Rows.Clear();
-                        string row1, row2;
-
-                        if (reader2.Read())
+                        using (MySqlConnection Conexao2 = new MySqlConnection(strCon))
                         {
+                            string sql2 = "SELECT nomeProduto, valorUnit FROM produto WHERE id=" + row[0];
+                            Conexao2.Open();
+                            MySqlCommand comando2 = new MySqlCommand(sql2, Conexao2);
+                            MySqlDataReader reader2 = comando2.ExecuteReader();
 
-                            row1 = reader2.GetString(0);
-                            row2 = reader2.GetString(1);
-
-                            var linha_listview = new ListViewItem(row2);
-                            dataGridView1.Rows.Add(row[0], row1, row[1], row2);
-
+                            if (reader2.Read())
+                            {
+                                string row1 = reader2.GetString(0);
+                                string row2 = reader2.GetString(1);
+                                if (row[0] != null)
+                                    dataGridView1.Rows.Add(row[0], row1, row[1], row2);
+                            }
                         }
-
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    finally
-                    {
-                        Conexao.Close();
-                    }
-
-                   // var linha_listview = new ListViewItem(row);
-                   // dataGridView1.Rows.Add(row[0], , row[1], "");
                 }
-
             }
             catch (Exception ex)
             {
@@ -985,56 +881,6 @@ namespace TccRestaurante
             {
                 Conexao.Close();
             }
-
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-            //    // Verifica se a linha não é uma linha de cabeçalho
-            //    if (!row.IsNewRow)
-            //    {
-            //        // Obtém o valor do ID da coluna específica (supondo que seja a primeira coluna)
-            //        int id = Convert.ToInt32(row.Cells[0].Value);
-
-            //        // Faça o que desejar com o ID...
-
-            //        try
-            //        {
-
-            //            Conexao = new MySqlConnection(strCon);
-
-            //            string sql = "SELECT nomeProduto, valorUnit FROM produto WHERE id=" + id;
-
-            //            Conexao.Open();
-
-            //            MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
-            //            MySqlDataReader reader = comando.ExecuteReader();
-
-            //            dataGridView1.Rows.Clear();
-
-            //            while (reader.Read())
-            //            {
-            //                string[] row2 =
-            //                {
-            //                    reader.GetString(1),
-            //                    reader.GetString(2),
-            //                };
-
-            //                var linha_listview = new ListViewItem(row2);
-            //                dataGridView1.Rows.Add("", row2[0], "", row2[1]);
-
-            //            }
-
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            MessageBox.Show(ex.Message);
-            //        }
-            //        finally
-            //        {
-            //            Conexao.Close();
-            //        }
-            //    }
-            //}
         }
 
 
@@ -1073,12 +919,14 @@ namespace TccRestaurante
         private void txtValorPago_KeyPress(object sender, KeyPressEventArgs e)
         {
             decimal valorTroco;
+            decimal valorPago;
             if (e.KeyChar == 13)
             {
+                valorPago = Convert.ToDecimal(txtValorPago.Text);
 
-                valorTroco = Convert.ToDecimal(txtValorPago.Text) - Total;
+                valorTroco = Convert.ToDecimal(valorPago.ToString("F")) - Total;
 
-                txtValorTroco.Text = valorTroco.ToString();
+                txtValorTroco.Text = valorTroco.ToString("F");
             }
         }
 

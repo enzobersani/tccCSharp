@@ -178,12 +178,16 @@ namespace TccRestaurante
                         reader.GetString(0),
                         reader.GetString(1),
                         reader.GetString(2),
-                        reader.GetString(3),   
                         reader.GetString(4),
+                        reader.GetString(9)
                     };
 
 
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                    if (row[0] != null)
+                    {
+                        dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                    }
+
 
                 }
 
