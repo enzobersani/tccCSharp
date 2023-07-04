@@ -46,13 +46,51 @@ namespace TccRestaurante
                     Button button = new Button();
                     button.Text = i.ToString();
                     button.Name = i.ToString();
-                    button.BackColor = Color.FromArgb(0, 255, 0);
+                    //button.BackColor = Color.FromArgb(0, 255, 0);
                     button.Size = new Size(180, 90);
                     string botao = button.Name;
 
+                    try
+                    {
+                        sqlCon = new MySqlConnection(strCon);
+
+                        string sql2 = "SELECT TP_SITUACAO FROM mesascadastro WHERE CD_MESA=" + i;
+
+                        sqlCon.Open();
+
+                        MySqlCommand comando2 = new MySqlCommand(sql2, sqlCon);
+
+                        MySqlDataReader reader2 = comando2.ExecuteReader();
+                        int situacaoMesa = 0;
+
+                        if (reader2.Read())
+                        {
+                            situacaoMesa = reader2.GetInt32(0);
+                        }
+
+                        if (situacaoMesa == 1)
+                        {
+                            button.BackColor = Color.FromArgb(240, 230, 140);
+                        }
+                        else
+                        {
+                            button.BackColor = Color.FromArgb(0, 255, 0);
+                            
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        sqlCon.Close();
+                    }
+
                     button.Click += new EventHandler((a, b) =>
                     {
-                        chamarVenda(botao);
+                        chamarVenda(sender, e, botao);
                     });
 
                     tbMesa.Controls.Add(button, -1, -1);
@@ -69,7 +107,7 @@ namespace TccRestaurante
             }
         }
 
-        private void chamarVenda(string botao)
+        private void chamarVenda(object sender, EventArgs e, string botao)
         {
             try
             {
@@ -136,6 +174,18 @@ namespace TccRestaurante
             finally
             {
                 sqlCon.Close();
+                tbMesa.SuspendLayout(); // Suspender a atualização do layout do TableLayoutPanel
+
+                // Remover todos os controles filhos do TableLayoutPanel
+                while (tbMesa.Controls.Count > 0)
+                {
+                    Control control = tbMesa.Controls[0];
+                    tbMesa.Controls.Remove(control);
+                    control.Dispose(); // Liberar os recursos do controle removido
+                }
+
+                tbMesa.ResumeLayout(); // Retomar a atualização do layout do TableLayoutPanel
+                TelaMesas_Load(sender, e);
             }
         }
 
@@ -161,6 +211,53 @@ namespace TccRestaurante
             {
                 sqlCon.Close();
             }
+        }
+
+        private void btnVerificar_Click(object sender, EventArgs e)
+        {
+            if (txtNumeroMesa.Text != "")
+            {
+                int botaoDigitado = Convert.ToInt32(txtNumeroMesa.Text);
+                ExibirApenasBotaoSelecionado(botaoDigitado);
+            }else if (txtNumeroMesa.Text == "")
+            {
+                tbMesa.SuspendLayout(); // Suspender a atualização do layout do TableLayoutPanel
+
+                // Remover todos os controles filhos do TableLayoutPanel
+                while (tbMesa.Controls.Count > 0)
+                {
+                    Control control = tbMesa.Controls[0];
+                    tbMesa.Controls.Remove(control);
+                    control.Dispose(); // Liberar os recursos do controle removido
+                }
+
+                tbMesa.ResumeLayout(); // Retomar a atualização do layout do TableLayoutPanel
+                TelaMesas_Load(sender, e);
+            }
+        }
+
+        private void ExibirApenasBotaoSelecionado(int botaoSelecionado)
+        {
+            tbMesa.SuspendLayout(); // Suspender a atualização do layout do TableLayoutPanel
+
+            // Ocultar todos os botões, exceto o botão selecionado
+            foreach (Control controle in tbMesa.Controls)
+            {
+                if (controle is Button botao)
+                {
+                    if (botao.Name == botaoSelecionado.ToString())
+                    {
+                        botao.Visible = true;
+                        tbMesa.SetCellPosition(botao, new TableLayoutPanelCellPosition(0, 0));
+                    }
+                    else
+                    {
+                        botao.Visible = false;
+                    }
+                }
+            }
+
+            tbMesa.ResumeLayout(); // Retomar a atualização do layout do TableLayoutPanel
         }
     }
 }

@@ -57,7 +57,7 @@ namespace TccRestaurante
 
                     var linha_listview = new ListViewItem(row);
 
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[4], row[3]);
                 }
 
             }
@@ -107,7 +107,7 @@ namespace TccRestaurante
 
                         var linha_listview = new ListViewItem(row);
 
-                        dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                        dataGridView1.Rows.Add(row[0], row[1], row[2], row[4], row[3]);
                     }
 
                 }
@@ -151,7 +151,7 @@ namespace TccRestaurante
                     };
 
                     var linha_listview = new ListViewItem(row);
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[4], row[3]);
 
                 }
 
@@ -198,7 +198,7 @@ namespace TccRestaurante
 
 
                
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[4], row[3]);
 
                 }
 

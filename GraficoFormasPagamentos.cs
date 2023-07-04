@@ -12,6 +12,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace TccRestaurante
 {
@@ -117,6 +121,56 @@ namespace TccRestaurante
             else
             {
                 GraficoFormasPagamentos_Load( sender, e);
+            }
+        }
+
+
+        private void ExportarParaPDF(string nomeArquivo, Control controle)
+        {
+            using (var documento = new Document())
+            {
+                try
+                {
+                    PdfWriter.GetInstance(documento, new System.IO.FileStream(nomeArquivo, System.IO.FileMode.Create));
+                    documento.Open();
+
+                    // Criar uma imagem do controle (gráfico)
+                    using (var bitmap = new Bitmap(controle.Width, controle.Height))
+                    {
+                        controle.DrawToBitmap(bitmap, new System.Drawing.Rectangle(0, 0, controle.Width, controle.Height));
+
+                        // Converter a imagem em formato iTextSharp
+                        var imagem = iTextSharp.text.Image.GetInstance(bitmap, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        float larguraMaxima = 400; // Defina o valor desejado para a largura
+                        float alturaMaxima = 400; // Defina o valor desejado para a altura
+                        imagem.ScaleToFit(larguraMaxima, alturaMaxima);
+                        imagem.Alignment = Element.ALIGN_CENTER;
+
+                        // Adicionar a imagem ao documento PDF
+                        documento.Add(imagem);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao exportar para PDF: " + ex.Message);
+                }
+                finally
+                {
+                    documento.Close();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                SaveFileDialog salvarArquivo = new SaveFileDialog();
+                salvarArquivo.Filter = "Arquivo PDF|*.pdf";
+                if (salvarArquivo.ShowDialog() == DialogResult.OK)
+                {
+                    ExportarParaPDF(salvarArquivo.FileName, chart1); // Substitua "graficoControl" pelo nome do seu controle de gráfico
+                    MessageBox.Show("Exportação concluída com sucesso!");
+                }
             }
         }
     }

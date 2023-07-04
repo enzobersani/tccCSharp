@@ -607,7 +607,6 @@ C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\ZstdNet.dll
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\EnvDTE.dll
-C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\BouncyCastle.Crypto.xml
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\Google.Protobuf.pdb
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\Google.Protobuf.xml
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\K4os.Compression.LZ4.xml
@@ -686,3 +685,6 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.pdb
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.TelaMovimentacaoEstoque.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaPagamentosUtilizados.resources
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.GraficoFormasPagamentos.resources
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaDesconto.resources
+C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\itextsharp.dll
+C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\itextsharp.xml

@@ -149,6 +149,7 @@
             this.txtCodigoFuncionario.Size = new System.Drawing.Size(87, 22);
             this.txtCodigoFuncionario.TabIndex = 2;
             this.txtCodigoFuncionario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCodigoFuncionario.DoubleClick += new System.EventHandler(this.txtCodigoFuncionario_DoubleClick);
             this.txtCodigoFuncionario.Leave += new System.EventHandler(this.txtCodigoFuncionario_Leave);
             // 
             // label2

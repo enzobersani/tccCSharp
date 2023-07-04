@@ -512,6 +512,7 @@ namespace TccRestaurante
                     txtValorPorPessoa.Text = "";
                     btnNovaVenda.Enabled = true;
                     dataGridView1.Rows.Clear();
+                    alterarSituacaoMesa0();
                 }
 
                 catch (Exception ex)
@@ -970,6 +971,12 @@ namespace TccRestaurante
             {
                 Conexao.Close();
             }
+        }
+
+        private void txtCodDesconto_DoubleClick(object sender, EventArgs e)
+        {
+            ListaDesconto listaDesconto = new ListaDesconto();
+            listaDesconto.ShowDialog();
         }
     }
 }

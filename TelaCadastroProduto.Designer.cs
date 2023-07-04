@@ -151,6 +151,7 @@
             this.txtCodigoProduto.TabIndex = 1;
             this.txtCodigoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCodigoProduto.TextChanged += new System.EventHandler(this.txtCodigoProduto_TextChanged);
+            this.txtCodigoProduto.DoubleClick += new System.EventHandler(this.txtCodigoProduto_DoubleClick);
             this.txtCodigoProduto.Leave += new System.EventHandler(this.txtCodigoProduto_Leave);
             // 
             // label1
@@ -221,6 +222,7 @@
             this.txtCodigoFornecedor.Size = new System.Drawing.Size(100, 22);
             this.txtCodigoFornecedor.TabIndex = 1;
             this.txtCodigoFornecedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCodigoFornecedor.DoubleClick += new System.EventHandler(this.txtCodigoFornecedor_DoubleClick);
             this.txtCodigoFornecedor.Leave += new System.EventHandler(this.txtCodigoFornecedor_Leave);
             // 
             // label6

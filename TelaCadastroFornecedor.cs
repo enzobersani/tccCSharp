@@ -192,6 +192,12 @@ namespace TccRestaurante
             ListaFornecedor listaFornecedor = new ListaFornecedor();
             listaFornecedor.ShowDialog();
         }
+
+        private void txtIdFornecedor_DoubleClick(object sender, EventArgs e)
+        {
+            ListaFornecedor listaFornecedor = new ListaFornecedor();
+            listaFornecedor.ShowDialog();
+        }
     }
  }
 

@@ -169,6 +169,7 @@
             this.txtCodDesconto.Size = new System.Drawing.Size(109, 29);
             this.txtCodDesconto.TabIndex = 5;
             this.txtCodDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCodDesconto.DoubleClick += new System.EventHandler(this.txtCodDesconto_DoubleClick);
             this.txtCodDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodDesconto_KeyPress);
             // 
             // txtCodProduto

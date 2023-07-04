@@ -229,5 +229,11 @@ namespace TccRestaurante
                 }
             }
         }
+
+        private void txtCodigoFuncionario_DoubleClick(object sender, EventArgs e)
+        {
+            ListaFuncionario listaFuncionario = new ListaFuncionario();
+            listaFuncionario.ShowDialog();
+        }
     }
 }

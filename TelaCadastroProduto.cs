@@ -274,6 +274,17 @@ namespace TccRestaurante
             }
         }
 
+        private void txtCodigoProduto_DoubleClick(object sender, EventArgs e)
+        {
+            ListaProduto listaProduto = new ListaProduto();
+            listaProduto.ShowDialog();
+        }
+
+        private void txtCodigoFornecedor_DoubleClick(object sender, EventArgs e)
+        {
+            ListaFornecedor listaFornecedor = new ListaFornecedor();
+            listaFornecedor.ShowDialog();
+        }
     }
 }
 
