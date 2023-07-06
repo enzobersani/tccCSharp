@@ -127,6 +127,12 @@
     <Compile Include="ListaPagamentosUtilizados.Designer.cs">
       <DependentUpon>ListaPagamentosUtilizados.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaVenda.Designer.cs">
+      <DependentUpon>ListaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaCadastroMesas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListaPagamentosUtilizados.resx">
       <DependentUpon>ListaPagamentosUtilizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaVenda.resx">
+      <DependentUpon>ListaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadastroMesas.resx">
       <DependentUpon>TelaCadastroMesas.cs</DependentUpon>

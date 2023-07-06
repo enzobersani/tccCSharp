@@ -166,8 +166,10 @@ namespace TccRestaurante
         {
             txtValorPago.Enabled = false;
             txtValorTroco.Enabled = false;
-            if (Owner is TelaMesas) 
-                CarregarDados();      
+            if (Owner is TelaMesas)
+                CarregarDados();
+            else btnSalvar.Enabled = false;
+
         }
 
         private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
@@ -243,8 +245,8 @@ namespace TccRestaurante
             btnSalvar.Enabled = true;
 
             btnNovaVenda.Enabled = false;
-            string strSql = "insert into vendas(CD_FUNCIONARIO) " +
-                "values('" + txtFuncionario.Text + "')";
+            string strSql = "insert into vendas(CD_FUNCIONARIO, ST_VENDA) " +
+                "values('" + txtFuncionario.Text + "', 'PENDENTE')";
             Conexao = new MySqlConnection(strCon);
             MySqlCommand comando = new MySqlCommand(strSql, Conexao);
 
@@ -266,7 +268,8 @@ namespace TccRestaurante
 
             catch (Exception ex)
             {
-                MessageBox.Show("Funcionário não cadastrado!");
+                //MessageBox.Show("Funcionário não cadastrado!");
+                MessageBox.Show(ex.Message);
                 btnNovaVenda.Enabled = true;
             }
             finally
@@ -322,7 +325,7 @@ namespace TccRestaurante
 
                 if (txtCodigoMesa.Text != "")
                 {
-                    string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
+                    string strSql = "UPDATE vendas SET ST_VENDA='REALIZADA', DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
                         "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
                          " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
                     Conexao = new MySqlConnection(strCon);
@@ -332,7 +335,7 @@ namespace TccRestaurante
                     {
                         Conexao.Open();
                         comando.ExecuteNonQuery();
-                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nDeseja gerar o relatório da venda?";
+                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório?";
                         string caption = "Teste de retorno";
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result;
@@ -362,7 +365,7 @@ namespace TccRestaurante
                             printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
                                 txtValorTotal.Text + "R$\n\n";
                             printer.TitleSpacing = 70;
-                            printer.SubTitleBackground = new SolidBrush(Color.Sienna);
+                            //printer.SubTitleBackground = new SolidBrush(Color.Sienna);
                             printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
 
                             printer.PrintPreviewDataGridView(dataGridView1);
@@ -397,7 +400,7 @@ namespace TccRestaurante
                 }
                 else
                 {
-                    string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
+                    string strSql = "UPDATE vendas SET ST_VENDA='REALIZADA', DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
                    "QT_VALORTOTAL='" + txtValorTotal.Text +
                    "' WHERE CD_VENDA='" + txtCodVenda.Text + "'";
                     Conexao = new MySqlConnection(strCon);
@@ -407,7 +410,7 @@ namespace TccRestaurante
                     {
                         Conexao.Open();
                         comando.ExecuteNonQuery();
-                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório? \nDeseja gerar o relatório da venda?";
+                        string mensagem = "Venda realizada com sucesso, deseja gerar relatório?";
                         string caption = "Teste de retorno";
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result;
@@ -437,7 +440,7 @@ namespace TccRestaurante
                             printer.SubTitle = "Relatório venda " + txtCodVenda.Text + " \n Valor Total: " +
                                 txtValorTotal.Text + "R$\n\n";
                             printer.TitleSpacing = 70;
-                            printer.SubTitleBackground = new SolidBrush(Color.Sienna);
+                           // printer.SubTitleBackground = new SolidBrush(Color.Sienna);
                             printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n\n " + DateTime.Now.ToShortDateString();
 
                             printer.PrintPreviewDataGridView(dataGridView1);

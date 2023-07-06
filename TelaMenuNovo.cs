@@ -193,5 +193,11 @@ namespace TccRestaurante
             ListaDesconto listaDesconto = new ListaDesconto();
             listaDesconto.ShowDialog();
         }
+
+        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaVenda listaVenda = new ListaVenda();
+            listaVenda.ShowDialog();
+        }
     }
 }

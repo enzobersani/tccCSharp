@@ -688,3 +688,4 @@ C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.GraficoFormasPagamentos
 C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaDesconto.resources
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\itextsharp.dll
 C:\Users\Enzo\Desktop\tccCSharp\bin\Debug\itextsharp.xml
+C:\Users\Enzo\Desktop\tccCSharp\obj\Debug\TccRestaurante.ListaVenda.resources
