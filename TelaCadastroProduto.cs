@@ -38,6 +38,12 @@ namespace TccRestaurante
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string valorTextBox = txtValorUnit.Text;
+            string valorBanco = valorTextBox.Replace(',', '.');
+
+            string valorQuantidade = txtEstoque.Text;
+            string valorQuantidadeBanco = valorBanco.Replace(',', '.');
+
             if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "" || txtCodigoFornecedor.Text == "")
             {
                 MessageBox.Show("Existem campos obrigatórios sem conteúdo!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,9 +51,10 @@ namespace TccRestaurante
             else
             {
 
+
                 strSql = "insert into produto (id, nomeProduto, descProduto, valorUnit, qtEstoque, idFornecedor) " +
                     "values ('" + txtCodigoProduto.Text + "', '" + txtProduto.Text + "', '" + txtDescProduto.Text + "'," +
-                    " '" + txtValorUnit.Text + "','" + txtEstoque.Text + "', '" + txtCodigoFornecedor.Text + "')";
+                    " '" + valorBanco + "','" + valorQuantidadeBanco + "', '" + txtCodigoFornecedor.Text + "')";
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);
 
@@ -195,6 +202,12 @@ namespace TccRestaurante
 
         private void button5_Click(object sender, EventArgs e)
         {
+            string valorTextBox = txtValorUnit.Text;
+            string valorBanco = valorTextBox.Replace(',', '.');
+
+            string valorQuantidade = txtEstoque.Text;
+            string valorQuantidadeBanco = valorBanco.Replace(',', '.');
+
             if (txtCodigoProduto.Text == "" || txtProduto.Text == "" || txtValorUnit.Text == "" || txtCodigoFornecedor.Text == "")
             {
                 MessageBox.Show("Existem campos obrigatórios sem conteúdo!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -203,7 +216,7 @@ namespace TccRestaurante
             {
 
                 strSql = "UPDATE produto SET nomeProduto='" + txtProduto.Text + "', descProduto='" + txtDescProduto.Text + "'," +
-                    " valorUnit='" + txtValorUnit.Text + "', qtEstoque='" + txtEstoque.Text + "', idFornecedor='"
+                    " valorUnit='" + valorBanco + "', qtEstoque='" + valorQuantidadeBanco + "', idFornecedor='"
                     + txtCodigoFornecedor.Text + "' WHERE id='" + txtCodigoProduto.Text + "'";
                 sqlCon = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, sqlCon);

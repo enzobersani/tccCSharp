@@ -221,6 +221,7 @@ namespace TccRestaurante
 
         private void txtPorPessoa_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Total = Convert.ToDecimal(txtValorTotal.Text);
             decimal valorPorPessoa;
             if(e.KeyChar == 13)
             {
@@ -325,8 +326,11 @@ namespace TccRestaurante
 
                 if (txtCodigoMesa.Text != "")
                 {
+                    string valorQuantidade = txtValorTotal.Text;
+                    string valorBanco = valorQuantidade.Replace(',', '.');
+
                     string strSql = "UPDATE vendas SET ST_VENDA='REALIZADA', DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', CD_PAGAMENTO='" + txtPagamento.Text + "', " +
-                        "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
+                        "QT_VALORTOTAL='" + valorBanco + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
                          " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
                     Conexao = new MySqlConnection(strCon);
                     MySqlCommand comando = new MySqlCommand(strSql, Conexao);
@@ -704,9 +708,11 @@ namespace TccRestaurante
         {
             if (dataGridView1.Rows.Count != 0)
             {
+                string valorQuantidade = txtValorTotal.Text;
+                string valorQuantidadeBanco = valorQuantidade.Replace(',', '.');
 
                 string strSql = "UPDATE vendas SET DT_VENDA='" + DateTime.Now.ToString("yyyy-MM-dd") + "', " +
-                    "QT_VALORTOTAL='" + txtValorTotal.Text + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
+                    "QT_VALORTOTAL='" + valorQuantidadeBanco + "', CD_MESA='" + txtCodigoMesa.Text + "'" +
                      " WHERE CD_VENDA='" + txtCodVenda.Text + "'";
                 Conexao = new MySqlConnection(strCon);
                 MySqlCommand comando = new MySqlCommand(strSql, Conexao);
@@ -787,7 +793,7 @@ namespace TccRestaurante
                     {
                         txtFuncionario.Text = reader.GetString(1);
                         txtCodVenda.Text = reader.GetInt32(0).ToString();
-                        txtValorTotal.Text = reader.GetString(4);
+                        txtValorTotal.Text = reader.GetString(3);
 
                         txtFuncionario.Enabled = false;
                         btnNovaVenda.Enabled = false;

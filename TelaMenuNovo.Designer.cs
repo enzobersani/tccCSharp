@@ -76,9 +76,10 @@
             this.formasPagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.descontoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formasPagamentoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesasMaisUtilizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -543,42 +544,50 @@
             // fornecedorToolStripMenuItem1
             // 
             this.fornecedorToolStripMenuItem1.Name = "fornecedorToolStripMenuItem1";
-            this.fornecedorToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.fornecedorToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.fornecedorToolStripMenuItem1.Text = "Fornecedor";
             this.fornecedorToolStripMenuItem1.Click += new System.EventHandler(this.fornecedorToolStripMenuItem1_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // formasPagamentoToolStripMenuItem
             // 
             this.formasPagamentoToolStripMenuItem.Name = "formasPagamentoToolStripMenuItem";
-            this.formasPagamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formasPagamentoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.formasPagamentoToolStripMenuItem.Text = "Formas Pagamento";
             this.formasPagamentoToolStripMenuItem.Click += new System.EventHandler(this.formasPagamentoToolStripMenuItem_Click);
             // 
             // produtoToolStripMenuItem1
             // 
             this.produtoToolStripMenuItem1.Name = "produtoToolStripMenuItem1";
-            this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produtoToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.produtoToolStripMenuItem1.Text = "Produto";
             this.produtoToolStripMenuItem1.Click += new System.EventHandler(this.produtoToolStripMenuItem1_Click);
             // 
             // descontoToolStripMenuItem1
             // 
             this.descontoToolStripMenuItem1.Name = "descontoToolStripMenuItem1";
-            this.descontoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.descontoToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.descontoToolStripMenuItem1.Text = "Desconto";
             this.descontoToolStripMenuItem1.Click += new System.EventHandler(this.descontoToolStripMenuItem1_Click);
+            // 
+            // vendasToolStripMenuItem
+            // 
+            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.vendasToolStripMenuItem.Text = "Vendas";
+            this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
             // 
             // gráficosToolStripMenuItem
             // 
             this.gráficosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formasPagamentoToolStripMenuItem2});
+            this.formasPagamentoToolStripMenuItem2,
+            this.mesasMaisUtilizadasToolStripMenuItem});
             this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
             this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.gráficosToolStripMenuItem.Text = "Gráficos";
@@ -586,16 +595,16 @@
             // formasPagamentoToolStripMenuItem2
             // 
             this.formasPagamentoToolStripMenuItem2.Name = "formasPagamentoToolStripMenuItem2";
-            this.formasPagamentoToolStripMenuItem2.Size = new System.Drawing.Size(177, 22);
+            this.formasPagamentoToolStripMenuItem2.Size = new System.Drawing.Size(187, 22);
             this.formasPagamentoToolStripMenuItem2.Text = "Formas Pagamento";
             this.formasPagamentoToolStripMenuItem2.Click += new System.EventHandler(this.formasPagamentoToolStripMenuItem2_Click);
             // 
-            // vendasToolStripMenuItem
+            // mesasMaisUtilizadasToolStripMenuItem
             // 
-            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.vendasToolStripMenuItem.Text = "Vendas";
-            this.vendasToolStripMenuItem.Click += new System.EventHandler(this.vendasToolStripMenuItem_Click);
+            this.mesasMaisUtilizadasToolStripMenuItem.Name = "mesasMaisUtilizadasToolStripMenuItem";
+            this.mesasMaisUtilizadasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.mesasMaisUtilizadasToolStripMenuItem.Text = "Mesas mais utilizadas";
+            this.mesasMaisUtilizadasToolStripMenuItem.Click += new System.EventHandler(this.mesasMaisUtilizadasToolStripMenuItem_Click);
             // 
             // TelaMenuNovo
             // 
@@ -689,5 +698,6 @@
         private System.Windows.Forms.ToolStripMenuItem formasPagamentoToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem descontoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesasMaisUtilizadasToolStripMenuItem;
     }
 }

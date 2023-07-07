@@ -199,5 +199,11 @@ namespace TccRestaurante
             ListaVenda listaVenda = new ListaVenda();
             listaVenda.ShowDialog();
         }
+
+        private void mesasMaisUtilizadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GraficoMesasUtilizadas graficoMesasUtilizadas = new GraficoMesasUtilizadas();
+            graficoMesasUtilizadas.ShowDialog();
+        }
     }
 }

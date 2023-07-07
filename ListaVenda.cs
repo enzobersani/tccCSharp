@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DGVPrinterHelper;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,13 +46,13 @@ namespace TccRestaurante
                         reader.IsDBNull(0) ? "" : reader.GetString(0),
                         reader.IsDBNull(1) ? "" : reader.GetString(1),
                         reader.IsDBNull(2) ? "" : reader.GetString(2),
-                        reader.IsDBNull(3) ? "" : reader.GetString(3),
-                        reader.IsDBNull(4) ? "" : reader.GetString(4),
+                        reader.IsDBNull(4) ? "" : reader.GetString(3),
+                        reader.IsDBNull(3) ? "" : reader.GetString(4),
                         reader.IsDBNull(5) ? "" : reader.GetString(5),
                         reader.IsDBNull(6) ? "" : reader.GetString(6)
                     };
 
-                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+                    dataGridView1.Rows.Add(row[0], row[1], row[2], row[4], row[3], row[5], row[6]);
 
                     if (row[5] == "REALIZADA")
                     {
@@ -73,6 +74,45 @@ namespace TccRestaurante
             {
                 Conexao.Close();
             }
+        }
+
+        private void exportarPdf_Click(object sender, EventArgs e)
+        {
+            String pasta_aplicacao = Application.StartupPath + @"\";
+
+            DGVPrinter printer = new DGVPrinter();
+
+            DGVPrinter.ImbeddedImage img1 = new DGVPrinter.ImbeddedImage();
+            Image img = Image.FromFile(pasta_aplicacao + @"images\logo.jpg");
+            Bitmap bitmap1 = new Bitmap(img);
+            //  This code is to crop the image sizee
+            Bitmap newImage = ResizeBitmap(bitmap1, 100, 100);
+            img1.theImage = newImage; img1.ImageX = 100; img1.ImageY = 20;
+            img1.ImageAlignment = DGVPrinter.Alignment.Center;
+            img1.ImageLocation = DGVPrinter.Location.Absolute;
+            printer.ImbeddedImageList.Add(img1);
+
+            printer.Title = "Restaurante Mister Lee\n\n";
+            printer.SubTitle = "Relatório de Vendas\n";
+            printer.SubTitleSpacing = 10;
+            printer.Footer = "Telefone 3018-2508\nAv.Edson de Lima Souto \n " + DateTime.Now.ToShortDateString();
+
+
+
+
+            printer.PrintPreviewDataGridView(dataGridView1);
+
+        }
+
+        public Bitmap ResizeBitmap(Bitmap bmp, int width, int height)
+        {
+            Bitmap result = new Bitmap(width, height);
+            using (Graphics g = Graphics.FromImage(result))
+            {
+                g.DrawImage(bmp, 0, 0, width, height);
+            }
+
+            return result;
         }
     }
 }
