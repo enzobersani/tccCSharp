@@ -24,6 +24,17 @@ namespace TccRestaurante
         public GraficoFormasPagamentos()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void GraficoFormasPagamentos_Load(object sender, EventArgs e)

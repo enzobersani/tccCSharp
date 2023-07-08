@@ -96,7 +96,7 @@
             this.btnRelatório.Name = "btnRelatório";
             this.btnRelatório.Size = new System.Drawing.Size(116, 38);
             this.btnRelatório.TabIndex = 1;
-            this.btnRelatório.Text = "Gerar PDF";
+            this.btnRelatório.Text = "&Gerar PDF";
             this.btnRelatório.UseVisualStyleBackColor = true;
             this.btnRelatório.Click += new System.EventHandler(this.btnRelatório_Click);
             // 
@@ -106,7 +106,7 @@
             this.btnGrafico.Name = "btnGrafico";
             this.btnGrafico.Size = new System.Drawing.Size(116, 38);
             this.btnGrafico.TabIndex = 2;
-            this.btnGrafico.Text = "Gráfico";
+            this.btnGrafico.Text = "Gr&áfico";
             this.btnGrafico.UseVisualStyleBackColor = true;
             this.btnGrafico.Click += new System.EventHandler(this.btnGrafico_Click);
             // 

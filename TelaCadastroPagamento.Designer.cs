@@ -119,7 +119,7 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(93, 33);
             this.btnAtualizar.TabIndex = 5;
-            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.Text = "&Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             // 
             // btnLimpar
@@ -128,7 +128,7 @@
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(93, 33);
             this.btnLimpar.TabIndex = 7;
-            this.btnLimpar.Text = "Limpar tela";
+            this.btnLimpar.Text = "L&impar tela";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
@@ -138,7 +138,7 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(93, 33);
             this.btnExcluir.TabIndex = 6;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "&Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
@@ -147,7 +147,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(93, 33);
             this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -157,7 +157,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 33);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Lista Pag.";
+            this.button2.Text = "&Lista Pag.";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

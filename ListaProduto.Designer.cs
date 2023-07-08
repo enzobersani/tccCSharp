@@ -104,7 +104,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 39);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Listar tudo";
+            this.button2.Text = "&Listar tudo";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -215,7 +215,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(114, 44);
             this.button4.TabIndex = 2;
-            this.button4.Text = "Gerar PDF";
+            this.button4.Text = "&Gerar PDF";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.btnRelatorioProduto_Click);
             // 

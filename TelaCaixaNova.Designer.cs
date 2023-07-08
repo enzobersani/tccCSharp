@@ -146,7 +146,7 @@
             this.btnNovaVenda.Name = "btnNovaVenda";
             this.btnNovaVenda.Size = new System.Drawing.Size(121, 42);
             this.btnNovaVenda.TabIndex = 2;
-            this.btnNovaVenda.Text = "Iniciar Venda";
+            this.btnNovaVenda.Text = "&Iniciar Venda";
             this.btnNovaVenda.UseVisualStyleBackColor = false;
             this.btnNovaVenda.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -202,7 +202,7 @@
             this.btnConfirmarVenda.Name = "btnConfirmarVenda";
             this.btnConfirmarVenda.Size = new System.Drawing.Size(137, 38);
             this.btnConfirmarVenda.TabIndex = 7;
-            this.btnConfirmarVenda.Text = "Confirmar";
+            this.btnConfirmarVenda.Text = "C&onfirmar";
             this.btnConfirmarVenda.UseVisualStyleBackColor = false;
             this.btnConfirmarVenda.Click += new System.EventHandler(this.btnConfirmarVenda_Click);
             // 
@@ -214,7 +214,7 @@
             this.btnCancelarVenda.Name = "btnCancelarVenda";
             this.btnCancelarVenda.Size = new System.Drawing.Size(136, 38);
             this.btnCancelarVenda.TabIndex = 8;
-            this.btnCancelarVenda.Text = "Cancelar";
+            this.btnCancelarVenda.Text = "&Cancelar";
             this.btnCancelarVenda.UseVisualStyleBackColor = false;
             this.btnCancelarVenda.Click += new System.EventHandler(this.btnCancelarVenda_Click);
             // 
@@ -270,7 +270,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 33);
             this.button2.TabIndex = 17;
-            this.button2.Text = "Apagar produto";
+            this.button2.Text = "&Apagar produto";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -367,7 +367,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(138, 33);
             this.btnSalvar.TabIndex = 20;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Text = "&Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 

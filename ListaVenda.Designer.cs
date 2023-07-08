@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.exportarPdf = new System.Windows.Forms.Button();
@@ -86,14 +86,14 @@
             this.exportarPdf.Name = "exportarPdf";
             this.exportarPdf.Size = new System.Drawing.Size(118, 42);
             this.exportarPdf.TabIndex = 2;
-            this.exportarPdf.Text = "Gerar PDF";
+            this.exportarPdf.Text = "&Gerar PDF";
             this.exportarPdf.UseVisualStyleBackColor = true;
             this.exportarPdf.Click += new System.EventHandler(this.exportarPdf_Click);
             // 
             // codigoVenda
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.codigoVenda.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.codigoVenda.DefaultCellStyle = dataGridViewCellStyle7;
             this.codigoVenda.HeaderText = "Código";
             this.codigoVenda.Name = "codigoVenda";
             this.codigoVenda.ReadOnly = true;
@@ -101,8 +101,8 @@
             // 
             // funcionario
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.funcionario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.funcionario.DefaultCellStyle = dataGridViewCellStyle8;
             this.funcionario.HeaderText = "Funcionário";
             this.funcionario.Name = "funcionario";
             this.funcionario.ReadOnly = true;
@@ -110,8 +110,8 @@
             // 
             // formaPagamento
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.formaPagamento.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.formaPagamento.DefaultCellStyle = dataGridViewCellStyle9;
             this.formaPagamento.HeaderText = "Forma Pag.";
             this.formaPagamento.Name = "formaPagamento";
             this.formaPagamento.ReadOnly = true;
@@ -119,8 +119,8 @@
             // 
             // codigoMesa
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.codigoMesa.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.codigoMesa.DefaultCellStyle = dataGridViewCellStyle10;
             this.codigoMesa.HeaderText = "Mesa";
             this.codigoMesa.Name = "codigoMesa";
             this.codigoMesa.ReadOnly = true;
@@ -128,8 +128,8 @@
             // 
             // qtValorTotal
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.qtValorTotal.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.qtValorTotal.DefaultCellStyle = dataGridViewCellStyle11;
             this.qtValorTotal.HeaderText = "Vl. Total";
             this.qtValorTotal.Name = "qtValorTotal";
             this.qtValorTotal.ReadOnly = true;
@@ -143,9 +143,9 @@
             // 
             // dataVenda
             // 
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataVenda.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Format = "d";
+            dataGridViewCellStyle12.NullValue = null;
+            this.dataVenda.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataVenda.HeaderText = "Data";
             this.dataVenda.Name = "dataVenda";
             this.dataVenda.ReadOnly = true;

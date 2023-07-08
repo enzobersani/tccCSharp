@@ -97,6 +97,10 @@ namespace TccRestaurante
                 }
 
                 Quantidade = Convert.ToDecimal(txtQuantidade.Text);
+
+                if(txtValorTotal.Text != "")
+                    Total = Convert.ToDecimal(txtValorTotal.Text);
+                
                 try
                 {
                     Conexao = new MySqlConnection(strCon);
@@ -168,8 +172,9 @@ namespace TccRestaurante
             txtValorTroco.Enabled = false;
             if (Owner is TelaMesas)
                 CarregarDados();
-            else btnSalvar.Enabled = false;
 
+            if (!(Owner is TelaMesas))
+                btnSalvar.Enabled = false;
         }
 
         private void txtCodDesconto_KeyPress(object sender, KeyPressEventArgs e)
@@ -269,8 +274,8 @@ namespace TccRestaurante
 
             catch (Exception ex)
             {
-                //MessageBox.Show("Funcionário não cadastrado!");
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Funcionário não cadastrado!");
+                //MessageBox.Show(ex.Message);
                 btnNovaVenda.Enabled = true;
             }
             finally
@@ -396,6 +401,7 @@ namespace TccRestaurante
                     catch (Exception ex)
                     {
                         MessageBox.Show("Modo de pagamento não informado!");
+                        //MessageBox.Show(ex.Message);
                     }
                     finally
                     {
@@ -930,6 +936,7 @@ namespace TccRestaurante
         {
             decimal valorTroco;
             decimal valorPago;
+            Total = Convert.ToDecimal(txtValorTotal.Text);
             if (e.KeyChar == 13)
             {
                 valorPago = Convert.ToDecimal(txtValorPago.Text);

@@ -22,6 +22,17 @@ namespace TccRestaurante
             InitializeComponent();
 
 
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void button1_Click(object sender, EventArgs e)

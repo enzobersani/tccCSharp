@@ -15,6 +15,17 @@ namespace TccRestaurante
         public TelaMenuNovo()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -204,6 +215,24 @@ namespace TccRestaurante
         {
             GraficoMesasUtilizadas graficoMesasUtilizadas = new GraficoMesasUtilizadas();
             graficoMesasUtilizadas.ShowDialog();
+        }
+
+        private void caixaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCaixaNova telaCaixaNova = new TelaCaixaNova();
+            telaCaixaNova.ShowDialog();
+        }
+
+        private void mesasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaMesas telaMesas = new TelaMesas();
+            telaMesas.ShowDialog();
+        }
+
+        private void movimentaçãoEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaMovimentacaoEstoque movimentacaoEstoque = new TelaMovimentacaoEstoque();
+            movimentacaoEstoque.ShowDialog();
         }
     }
 }

@@ -16,6 +16,17 @@ namespace TccRestaurante
         public TelaCadastrodeDesconto()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         MySqlConnection sqlCon = null;
@@ -177,6 +188,12 @@ namespace TccRestaurante
                 }
             }
             btnAtualizar.Enabled = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ListaDesconto listaDesconto = new ListaDesconto();
+            listaDesconto.ShowDialog();
         }
     }
 }

@@ -159,7 +159,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(149, 45);
             this.btnSalvar.TabIndex = 1;
-            this.btnSalvar.Text = "Confirmar";
+            this.btnSalvar.Text = "&Confirmar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -169,7 +169,7 @@
             this.btnLimparTela.Name = "btnLimparTela";
             this.btnLimparTela.Size = new System.Drawing.Size(149, 45);
             this.btnLimparTela.TabIndex = 2;
-            this.btnLimparTela.Text = "Limpar Tela";
+            this.btnLimparTela.Text = "&Limpar Tela";
             this.btnLimparTela.UseVisualStyleBackColor = true;
             this.btnLimparTela.Click += new System.EventHandler(this.btnLimparTela_Click);
             // 

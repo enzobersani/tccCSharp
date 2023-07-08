@@ -17,6 +17,17 @@ namespace TccRestaurante
         public GraficoMesasUtilizadas()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void GraficoMesasUtilizadas_Load(object sender, EventArgs e)
@@ -52,17 +63,22 @@ namespace TccRestaurante
 
             while (resultado.Read())
             {
-                //String nome2 = resultado.GetString("");
+                string CdMesa = resultado.GetString("CD_MESA");
                 int quatidade = resultado.GetInt32("quantidade");
 
-                chart1.Series.Add(quatidade.ToString());
-                //chart1.Series[nome2].Points.Add(quatidade);
+                chart1.Series.Add(CdMesa);
+                chart1.Series[CdMesa].Points.Add(quatidade);
             }
 
             txtDataInicial.Focus();
         }
 
         private void btnAplicarFiltro_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAplicarFiltro_Click_1(object sender, EventArgs e)
         {
             if (txtDataFinal.Text != "  /  /" && txtDataInicial.Text != " /  / ")
             {
@@ -98,11 +114,11 @@ namespace TccRestaurante
 
                     while (resultado.Read())
                     {
-                        String nome2 = resultado.GetString("");
+                        string CdMesa = resultado.GetString("CD_MESA");
                         int quatidade = resultado.GetInt32("quantidade");
 
-                        chart1.Series.Add(nome2);
-                        chart1.Series[nome2].Points.Add(quatidade);
+                        chart1.Series.Add(CdMesa);
+                        chart1.Series[CdMesa].Points.Add(quatidade);
                     }
                 }
                 catch (Exception ex)

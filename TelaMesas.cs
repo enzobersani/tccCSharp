@@ -19,9 +19,20 @@ namespace TccRestaurante
         public TelaMesas()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
-        private void TelaMesas_Load(object sender, EventArgs e)
+    protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+    {
+        if (keyData == Keys.Escape)
+        {
+            this.Close();
+            return true;
+        }
+        return base.ProcessCmdKey(ref msg, keyData);
+    }
+
+    private void TelaMesas_Load(object sender, EventArgs e)
         {
             try
             {
